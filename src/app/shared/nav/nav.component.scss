@@ -1,0 +1,31 @@
+@import '../../../helper.scss';
+
+a{
+  font-size: 24px;
+  font-weight: 400;
+  color: $whiteColor;
+  transition: color 125ms ease-in-out;
+  &:hover{
+    color: $greenColor;
+  }
+}
+
+nav{
+  height: 112px;
+  position: fixed;
+  z-index: 100;
+  top:0;
+  left: 64px;
+  right: 64px;
+  background-color: $bgColor;
+  >a{
+    font-size: 32px;
+  }
+  padding: 0 24px;
+  @extend .d-flex-center;
+  justify-content: space-between;
+  div{
+    @extend .d-flex-center;
+    gap: 32px;
+  }
+}

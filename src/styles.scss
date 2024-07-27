@@ -1,1 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
+@import './fonts.scss';
+@import './helper.scss';
+
+body{
+  box-sizing: border-box;
+  margin: 0;
+  font-family: 'Poppins';
+  color: $whiteColor;
+  background-color: $bgColor;
+  max-width: 1440px;
+  //padding: 0 64px;
+}
+
+a{
+  text-decoration: none;
+  cursor: pointer;
+}

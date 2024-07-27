@@ -1,0 +1,158 @@
+@import '../../../helper.scss';
+
+section{
+  display: flex;
+  margin-top: 112px;
+  div{
+    padding-top: 60px;
+  }
+}
+
+section{
+  .aot{
+    figure{
+      margin: 0;
+      max-width: 646px;
+      height: 100%;
+      position: relative;
+      img.me{
+        object-fit: contain;
+        object-position: center;
+        width: 100%;
+        height: 100%;
+      }
+      img.bg-color-aot{
+        position: absolute;
+        width: 120%;
+        height: 100%;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 80px;
+        z-index: -10;
+      }
+    }
+  }
+  .container-data{
+    flex: 1;
+    @extend .d-flex-center;
+    .sub-container{
+      margin: 0;
+      padding: 0;
+      >p{
+        margin: 0;
+      }
+      >div{
+        padding-top: 0;
+        >p{
+          margin: 0;
+        }
+      }
+    }
+
+  }
+}
+
+.info{
+  display: flex;
+  flex-direction: column;
+  .name{
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1;
+  }
+  
+  .job{
+    font-size: 56px;
+    font-weight: 400;
+    color: $purppleColor;
+  }
+
+}
+
+
+
+// .aot{
+//   position: relative;
+//   figure{
+//     position: absolute;
+//   }
+//   .me{
+//     z-index: 10;
+//   }
+//   .bg-colors{
+//     z-index: 5;
+//   }
+// }
+
+
+
+// section{
+//   height: 100vh;
+//   width: 100%;
+//   position: relative;
+//   overflow: hidden;
+//   figure.pic-presentation{
+//     margin: 0;
+//     position: absolute;
+//     width: 100%;
+//     left:0;
+//     right: 0;
+//     bottom: -70vh;
+//     z-index: -1;
+//     .me{
+//       width: 40%;
+//       object-fit: cover;
+//       position: absolute;
+//       bottom: 620px;
+//       left:5%;
+//       z-index: -10;
+//     }
+//     .bg-colors{
+//       object-fit: contain;
+//       z-index: -100;
+//       position: absolute;
+//       width: 55%;
+//       bottom: 520px;
+//       left: 0;
+//     }
+//     .bg-hero{
+//       max-width: 1440px;
+//     }
+    
+//   }
+//   div.container{
+//     padding-top: 112px;
+//     height: 100%;
+//     @extend .d-flex-center;
+//     .container-empty{
+//       flex: 1;
+//       height: 100%;
+//     }
+//     .container-data{
+//       flex: 1;
+//       height: 100%;
+//     }
+//   }
+// }
+
+// .container-data{
+//   @extend .d-flex-center;
+//   div{
+//     margin-top: -200px;
+//     padding-right: 32px;
+//     .name{
+//       @extend .d-flex-center;
+//       font-size: 54px;
+//       font-weight: 700;
+//       margin: 0;
+//     }
+//     .job{
+//       @extend .d-flex-center;
+//       font-size: 54px;
+//       font-weight: 700;
+//       margin: 0;
+//     }
+//   }
+// }
+

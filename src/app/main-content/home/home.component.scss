@@ -2,7 +2,11 @@
 
 section{
   display: flex;
-  margin-top: 112px;
+  //margin-top: 112px;
+  position: relative;
+  height: 100vh;
+
+  overflow: hidden;
   div{
     padding-top: 60px;
   }
@@ -10,9 +14,9 @@ section{
 
 section{
   .aot{
-    figure{
+    >figure{
       margin: 0;
-      max-width: 646px;
+      max-width: 500px;
       height: 100%;
       position: relative;
       img.me{
@@ -36,17 +40,38 @@ section{
   .container-data{
     flex: 1;
     @extend .d-flex-center;
+    flex-direction: column;
+    gap: 24px;
+    position: relative;
+    z-index: 10;
+    margin-top: -150px;
+    margin-left: -250px;
     .sub-container{
-      margin: 0;
-      padding: 0;
-      >p{
-        margin: 0;
-      }
       >div{
-        padding-top: 0;
+        margin: 0;
+        padding: 0;
+        @extend .d-flex-center;
+        gap: 24px;
         >p{
-          margin: 0;
+          margin-top: 40px;
+          padding-top: 0;
+          height: 0;
+          display: flex;
+          transform: rotate(270deg);
+          font-size: 54px;
+          font-weight: 400;
         }
+        >div{
+          margin: 0;
+          padding-top: 0;
+          >p{
+            margin: 0;
+          }
+        }
+      }
+      >a{
+        text-decoration: none;
+        cursor: pointer; 
       }
     }
 
@@ -68,6 +93,31 @@ section{
     color: $purppleColor;
   }
 
+}
+
+.lets-talk{
+  font-size: 24px;
+  font-weight: 400;
+  background-color: $greenColor;
+  padding: 15px 30px;
+  display: block;
+  border-radius: 10px;
+}
+
+.figure-bg-slide{
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  width: 100%;
+  top:0;
+  left:0;
+  right: 0;
+  bottom:0;
+  img{
+    width: 100%;
+    object-position: 0 30vh;
+    object-fit: contain;
+  }
 }
 
 

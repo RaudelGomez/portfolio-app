@@ -15,13 +15,13 @@ nav{
   position: fixed;
   z-index: 100;
   top:0;
-  left: 64px;
-  right: 64px;
+  left: 0;
+  right: 0;
   background-color: $bgColor;
   >a{
     font-size: 32px;
   }
-  padding: 0 24px;
+  padding: 0 88px;
   @extend .d-flex-center;
   justify-content: space-between;
   div{

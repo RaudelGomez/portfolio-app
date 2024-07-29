@@ -28,7 +28,7 @@ section{
       img.bg-color-aot{
         position: absolute;
         width: 120%;
-        height: 100%;
+        height: 90%;
         left: 0;
         right: 0;
         bottom: 0;
@@ -109,15 +109,29 @@ section{
   padding: 0;
   position: absolute;
   width: 100%;
-  top:0;
+  //top:0;
   left:0;
   right: 0;
   bottom:0;
   img{
     width: 100%;
-    object-position: 0 30vh;
+    object-position: 0 70vh;
     object-fit: contain;
   }
+}
+
+.curve-slide{
+  margin: 0 !important;
+  padding: 0;
+  position: absolute;
+  width: 100%;
+  top: 30vh;
+  left:0;
+  right: 0;
+  bottom: 0;
+  //z-index: 100;
+  background-size: cover;
+  background-image: url('../../../assets/img/background_hero.png');
 }
 
 

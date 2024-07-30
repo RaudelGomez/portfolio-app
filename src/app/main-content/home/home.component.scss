@@ -99,7 +99,8 @@ section{
   @include button();
   transition: all 125ms ease-in-out;
   &:hover{
-    @include button($purppleColor, 20px, 40px);
+    @include button($purppleColor);
+    transform: scale(1.2);
   }
 }
 

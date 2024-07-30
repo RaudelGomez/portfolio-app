@@ -1,5 +1,15 @@
 @import '../../../helper.scss';
 
+.text-end{
+  text-align: end;
+}
+
+section{
+  >p, >article{
+    @extend .padding-web;
+  }
+}
+
 section{
   //@extend .padding-web;
   @include padding-top-bottom(64px);
@@ -29,10 +39,145 @@ section{
       background-color: $purppleColor;
     }
   }
-  // >img{
-  //   position: absolute;
-  //   left: -500px;
-  //   bottom: -330px;
-  //   width: 800px;
-  // }
 }
+
+section{
+  article{
+    >div{
+      @extend .d-flex-center;
+      justify-content: space-around;
+      gap:46px;
+      figure.normal-figure{
+        margin: 0;
+        width: 620px;
+        height: 339px;
+        flex:1;
+        @extend .d-flex-center;
+        justify-content: flex-end;
+        img{
+          margin-top: -50px;
+          width: 70%;
+          height: 100%;
+        }
+      }
+      div.normal-div{
+        >*{
+          margin: 0;
+        }
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap:15px;
+        h4{
+          font-size: 32px;
+          font-weight: 700;
+          color: $purppleColor;
+        }
+        h5{
+          font-size: 24px;
+          font-weight: 400;
+          color: $greenColor;
+        }
+        p{
+          font-size: 16px;
+          font-weight: 400;
+        }
+        >div{
+          @extend .d-flex-center;
+          justify-content: flex-start;
+          gap:88px;
+          a{
+            @include button($purppleColor);
+            transition: all 125ms ease-in-out;
+            &:hover{
+              transform: scale(1.2);
+              @include button($greenColor);
+            }
+          }
+          a:last-child{
+            @include button(transparent);
+            border: 1px solid $greenColor;
+            transition: all 125ms ease-in-out;
+            &:hover{
+              transform: scale(1.2);
+              @include button($greenColor);
+            }
+          }
+        }
+      }
+
+      figure.invert-figure{
+        margin: 0;
+        width: 620px;
+        height: 339px;
+        flex:1;
+        @extend .d-flex-center;
+        justify-content: flex-start;
+        img{
+          margin-top: -50px;
+          width: 70%;
+          height: 100%;
+        }
+      }
+
+      div.invert-div{
+        >*{
+          margin: 0;
+          @extend .text-end;
+        }
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap:15px;
+        h4{
+          font-size: 32px;
+          font-weight: 700;
+          color: $purppleColor;
+        }
+        h5{
+          font-size: 24px;
+          font-weight: 400;
+          color: $greenColor;
+        }
+        p{
+          font-size: 16px;
+          font-weight: 400;
+        }
+        >div{
+          @extend .d-flex-center;
+          justify-content: flex-end;
+          gap:88px;
+          a{
+            @include button($purppleColor);
+            transition: all 125ms ease-in-out;
+            &:hover{
+              transform: scale(1.2);
+              @include button($greenColor);
+            }
+          }
+          a:last-child{
+            @include button(transparent);
+            border: 1px solid $greenColor;
+            transition: all 125ms ease-in-out;
+            &:hover{
+              transform: scale(1.2);
+              @include button($greenColor);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
+// @mixin button($color: $greenColor, $paddingY: 15px, $paddingX: 30px ){
+//   font-size: 24px;
+//   font-weight: 400;
+//   background-color: $color;
+//   padding: $paddingY $paddingX;
+//   display: inline-block;
+//   border-radius: 10px;
+// }

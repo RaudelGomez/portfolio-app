@@ -170,14 +170,42 @@ section{
   }
 }
 
-
-
-
-// @mixin button($color: $greenColor, $paddingY: 15px, $paddingX: 30px ){
-//   font-size: 24px;
-//   font-weight: 400;
-//   background-color: $color;
-//   padding: $paddingY $paddingX;
-//   display: inline-block;
-//   border-radius: 10px;
-// }
+section{
+  .recommendation-container{
+    @extend .d-flex-center;
+    @extend .padding-web;
+    .recommendation-sub-container{
+      @extend .d-flex-center;
+      position: relative;
+      border: 4px solid $greenColor;
+      border-radius: 32px;
+      img{
+        position: absolute;
+        top: -40px;
+        left: -30px;
+        width: 68px;
+        aspect-ratio: 1/1;
+      }
+      p{
+        padding: 48px 96px;
+      }
+    }
+    >figure{
+      margin: 0;
+      padding: 0;
+      width: 272px;
+      // width: 100%;
+      height: 272px;
+      // height: 100%;
+      border-radius: 40px;
+      display: block;
+      >img{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: center;
+        border-radius: 100%;
+      }
+    }
+  }  
+}

@@ -34,6 +34,11 @@ section{
           height: 100%;
           object-fit: contain;
           object-position: center;
+          transition: all 75ms ease-in-out;
+          cursor: pointer;
+          &:hover{
+            transform: scale(1.4);
+          }
         };
       }
       >a{

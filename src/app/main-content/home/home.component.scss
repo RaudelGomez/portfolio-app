@@ -97,6 +97,10 @@ section{
 
 .lets-talk{
   @include button();
+  transition: all 125ms ease-in-out;
+  &:hover{
+    @include button($purppleColor, 20px, 40px);
+  }
 }
 
 .figure-bg-slide{

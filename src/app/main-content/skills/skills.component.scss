@@ -7,6 +7,8 @@ section{
   gap: 92px;
   @extend .padding-web;
   @include padding-top-bottom(64px);
+  position: relative;
+  // z-index: 100;
   .icons{
     @extend .d-flex-center;
     justify-content: flex-start;
@@ -69,6 +71,21 @@ section{
         color: $purppleColor;
       }
     }
+  }
+  // >article{
+  //   width: 100px;
+  //   height: 100px;
+  //   position: absolute;
+  //   bottom: 0;
+  //   left: 0;
+  //   z-index: 1000;
+  //   background-image: url('../../../assets/img/background_hero.png');
+  // }
+  >img{
+    position: absolute;
+    left: -320px;
+    bottom: -330px;
+    width: 500px;
   }
 }
 

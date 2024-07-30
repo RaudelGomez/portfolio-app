@@ -5,7 +5,7 @@ section{
     font-size: 16px;
     font-weight: 400;
   }
-  @extend .padding-web;
+  //@extend .padding-web;
   @include padding-top-bottom(64px);
   // background-image: url('../../../assets/img/bg_slide.png');
   // background-repeat: repeat;
@@ -51,6 +51,7 @@ section{
 
 section{
   .about-me-container{
+    @extend .padding-web;
     @extend .d-flex-center;
     flex-direction: column;
     h2{
@@ -76,31 +77,35 @@ section{
           }
         }
       }
-      .contaniner-img-divider{
+      div{
         flex:1;
-        @extend .d-flex-center;
-        figure{
-          max-width: 453px;
-          max-height: 453px;
-          margin: 0;
-          padding: 0;
-          border-radius: 75%;
-          border: 1px solid black;
-          overflow: hidden;
-          border: 4px solid $greenColor;
-          img{
-            width: 100%;
-            height: 100%;
-            object-position: center;
-            object-fit: contain;
-          }
-        }
-        .photo-divider{
-          width: 67px;
-          height: 4px;
-          background-color: $greenColor;
-        }
       }
+      // .contaniner-img-divider{
+      //   flex:1;
+      //   @extend .d-flex-center;
+      //   position: relative;
+      //   figure{
+      //     max-width: 453px;
+      //     max-height: 453px;
+      //     margin: 0;
+      //     padding: 0;
+      //     border-radius: 75%;
+      //     border: 1px solid black;
+      //     overflow: hidden;
+      //     border: 4px solid $greenColor;
+      //     img{
+      //       width: 100%;
+      //       height: 100%;
+      //       object-position: center;
+      //       object-fit: contain;
+      //     }
+      //   }
+      //   .photo-divider{
+      //     width: 67px;
+      //     height: 4px;
+      //     background-color: $greenColor;
+      //   }
+      // }
     }
   }
 }
@@ -110,5 +115,34 @@ section{
   flex-direction: column;
   .row-text{
     @extend .d-flex-center;
+  }
+}
+
+.contaniner-img-divider{
+  @extend .d-flex-center;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  top: 200px;
+  figure{
+    max-width: 453px;
+    max-height: 453px;
+    margin: 0;
+    padding: 0;
+    border-radius: 75%;
+    border: 1px solid black;
+    overflow: hidden;
+    border: 4px solid $greenColor;
+    img{
+      width: 100%;
+      height: 100%;
+      object-position: center;
+      object-fit: contain;
+    }
+  }
+  .photo-divider{
+    width: 67px;
+    height: 4px;
+    background-color: $greenColor;
   }
 }

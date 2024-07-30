@@ -91,13 +91,14 @@ section{
 
 .svgContainer{
   position: relative;
+  z-index: 10;
   .colorSvg{
     fill: $purppleColor;
-    transition: all 125ms ease-in-out;
+    //transition: all 125ms ease-in-out;
   }
   figcaption{
     color: $purppleColor;
-    transition: all 125ms ease-in-out;
+    //transition: all 125ms ease-in-out;
   }
   figure{
     position: absolute;
@@ -107,6 +108,7 @@ section{
     padding: 0;
     width: 200px;
     height: 196px;
+    transform: scale(0);
     visibility: hidden;
     pointer-events: none;
     transition: all 125ms ease-in-out;
@@ -120,7 +122,7 @@ section{
       padding: 2px 8px 8px;
       font-weight: 300;
     }
-    
+   
   }
 }
 
@@ -184,9 +186,10 @@ section{
   fill: $whiteColor;
 }
 
-.svgContainer:hover:hover figure{
+.svgContainer:hover figure {
   visibility: visible;
   pointer-events: unset;
+  transform: scale(1);
 }
 
 .jump{

@@ -96,12 +96,7 @@ section{
 }
 
 .lets-talk{
-  font-size: 24px;
-  font-weight: 400;
-  background-color: $greenColor;
-  padding: 15px 30px;
-  display: block;
-  border-radius: 10px;
+  @include button();
 }
 
 .figure-bg-slide{

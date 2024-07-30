@@ -1,1 +1,198 @@
 @import '../../../helper.scss';
+
+section{
+  @extend .d-flex-center;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 92px;
+  @extend .padding-web;
+  @include padding-top-bottom(64px);
+  .icons{
+    @extend .d-flex-center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    flex: 1;
+    gap: 72px;
+    >figure{
+      @extend .d-flex-center;
+      flex-direction: column;
+      margin: 0;
+      gap: 10px;
+      width: 54px;
+      aspect-ratio: 1/1;
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: center;
+      }
+      svg{
+        width: 100%;
+        height: 100%
+      }
+      figcaption{
+        font-size: 14px;
+        font-weight: 700;
+        text-align: center;
+      }
+    }
+  }
+  .text-container{
+    @extend .d-flex-center;
+    align-items: flex-end;
+    flex: 1;
+    flex-direction: column;
+    gap: 24px;
+    h2{
+      line-height: 1;
+      margin-bottom: 12px;
+    }
+    a{
+      @include button();
+    }
+    >p{
+      margin: 0;
+      text-align: end;
+      font-size: 16px;
+      font-weight: 400;
+    }
+    >h4{
+      margin: 0;
+      text-align: end;
+      font-size: 32px;
+      font-weight: 700;
+      span{
+        color: $purppleColor;
+      }
+    }
+  }
+}
+
+.svgContainer{
+  position: relative;
+  .colorSvg{
+    fill: $purppleColor;
+    transition: all 125ms ease-in-out;
+  }
+  figcaption{
+    color: $purppleColor;
+    transition: all 125ms ease-in-out;
+  }
+  figure{
+    position: absolute;
+    bottom: 50px;
+    right: -120px;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    height: 196px;
+    visibility: hidden;
+    pointer-events: none;
+    transition: all 125ms ease-in-out;
+    figcaption{
+      position: absolute;
+      top:40px;
+      left:0;
+      right:0;
+      bottom: 0;
+      color:black;
+      padding: 2px 8px 8px;
+      font-weight: 300;
+    }
+    
+  }
+}
+
+.learning-caption{
+  div{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    figure.react-cont{
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top:5px;
+      left: 40px;
+      display: inline-block;
+      figcaption{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: -85px;
+        top: 30px;
+      }
+    }
+    figure.phython-cont{
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top:5px;
+      right: -80px;
+      display: inline-block;
+      figcaption{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: -65px;
+        top: 30px;
+      }
+    }
+  }
+}
+
+.yellow-color{
+  fill: #ffdc50;
+}
+
+.blue-color{
+  fill: #00233f
+}
+
+.svgContainer:hover figcaption{
+  color: $whiteColor;
+}
+
+.svgContainer:hover svg .colorSvg{
+  fill: $whiteColor;
+}
+
+.svgContainer:hover:hover figure{
+  visibility: visible;
+  pointer-events: unset;
+  }
+
+// .icon-continue-learning:hover{
+//   .colorSvg{
+//     fill: $whiteColor;
+//   }
+// }
+
+// .icon-continue-learning:hover~ figcaption{
+//     color: $whiteColor;
+// }
+
+// .icon-continue-learning:hover+ figure{
+//   display: block;
+// }
+
+// .svgContainer{
+//   figcaption:hover+ figure {
+//       display: unset;
+//   }
+// }
+
+// svg.react-icon{
+//   position: relative !important;
+//   width: 100%;
+//   height: 100%;
+//   position: absolute;
+//   left: 20px;
+//   top: 10px;
+// }

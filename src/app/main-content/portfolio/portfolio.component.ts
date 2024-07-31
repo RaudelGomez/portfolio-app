@@ -20,7 +20,7 @@ export class PortfolioComponent  {
     {
       name: "Alain Soltau",
       text: "Raudel has demonstrated exceptional performance in our team project. His in-depth knowledge of JavaScript allowed him to efficiently and creatively tackle even the most challenging tasks. What stands out is his ability to quickly analyze complex problems and come up with effective solutions. Raudel works very well in a team, always offering constructive suggestions and supporting his colleagues when needed. His technical skills and teamwork have significantly contributed to the success of our project.",
-      img: "./assets/img/Ozkan.jpg",
+      img: "./assets/img/me-lateral.png",
     }
   ]
 

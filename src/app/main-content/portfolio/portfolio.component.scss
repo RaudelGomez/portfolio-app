@@ -65,8 +65,10 @@ section{
         justify-content: flex-end;
         img{
           margin-top: -50px;
-          width: 70%;
+          width: 50%;
           height: 100%;
+          object-fit: contain;
+          object-position: center;
         }
       }
       div.normal-div{
@@ -124,8 +126,10 @@ section{
         justify-content: flex-start;
         img{
           margin-top: -50px;
-          width: 70%;
+          width: 50%;
           height: 100%;
+          object-fit: contain;
+          object-position: center;
         }
       }
 
@@ -183,7 +187,8 @@ section{
   .recommendation-container{
     @extend .d-flex-center;
     gap:48px;
-    @extend .padding-web;
+    padding: 0 188px;
+    // @extend .padding-web;
     .recommendation-sub-container{
       @extend .d-flex-center;
       position: relative;
@@ -229,7 +234,7 @@ section{
 div.slide-partner-container{
   position: absolute;
   right: 0;
-  bottom: 104px;
+  bottom: 138px;
   @extend .d-flex-center;
 
   figure.partner-figure{
@@ -253,7 +258,7 @@ div.slide-partner-container{
 }
 
 div.divider-partrner{
-  width: 104px;
+  width: 188px;
   height: 4px;
   background-color: $purppleColor;
 }

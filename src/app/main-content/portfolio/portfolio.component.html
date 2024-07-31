@@ -67,12 +67,39 @@
    <div class="recommendation-container">
       <div class="recommendation-sub-container">
         <img src="../../../assets/img/comillas.png" alt="comillas">
-        <p>Raudel is completely in his element when programming with JavaScript. He loves writing functions and solving complex tasks. He programmed important functions for our Kanban project (Join). He was also a valuable help in the team with his ability to quickly grasp and solve problems. I would be happy to work with him again at any time and can recommend him without reservation.</p>
+          <p>{{currentText}}</p>
+        <div>
+          <div class="divider-text-partner"></div>
+          <span>{{currentName}} - Team Partner</span>
+        </div>
       </div>
-      <figure class="partner-figure">
-        <img src="../../../assets/img/Ozkan.jpg" alt="Oezkan">
+      <figure >
+        <!-- <img src="../../../assets/img/Ozkan.jpg" alt="Oezkan"> -->
       </figure>
    </div>
-</section>
+   <div class="container-arrows-partner">
+      <div class="sub-container-arrows-partner">
+        <figure (click)="before()">
+          <img src="../../../assets/img/links.png" alt="link arrow">
+        </figure>
+        @for(point of recommendation; track point; let index = $index){
+          @if(currentPostId == index){
+            <div (click)="updateRecomendation(index)" class="pointGreen"></div>
+          }@else{
+            <div (click)="updateRecomendation(index)" class="pointPurpple"></div>
+          }
+        }
+        <figure (click)="next()">
+          <img src="../../../assets/img/rechts.png" alt="right arrow">
+        </figure>
+      </div>
+   </div>
+   <div class="slide-partner-container">
+     <figure class="partner-figure">
+      <img src="{{currentImg}}" alt="Oezkan">
+     </figure>
+     <div class="divider-partrner"></div>
+   </div>
+  </section>
 
   

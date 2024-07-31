@@ -10,15 +10,43 @@
       <p>Contact me through this form, I am interested in hearing from you, knowing your ideas and contributing to your projects with my work.</p>
       <p>Need a Frontend developer? <span>Contact me!</span></p>
     </div>
-    <form>
+    <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
       <article>
-        <input type="text" placeholder="Your name">
-        <input type="email" placeholder="Your email">
-        <textarea rows="10" name="text" placeholder="Your message"></textarea>
+        <div class="form-control">
+          <input [(ngModel)]="contactData.name" type="text" #name="ngModel" name="name" placeholder="Your name" required (click)="fieldClick(name, 'name')">
+          @if (!name.valid && name.touched ) {
+            <p class="required-field">Your name is required</p>
+          }@else {
+            <p class="required-field" [ngClass]="{ 'd-none':!errorState['name'] || name.valid}">Your name is required</p>
+          }
+        </div>
+        
+        <div class="form-control">
+          <input [(ngModel)]="contactData.email" type="email" #email="ngModel" name="email" placeholder="Your email" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" (click)="fieldClick(email, 'email')">
+          
+          @if (!email.valid && email.touched ) {
+            <p class="required-field">Your name is required</p>
+          }@else {
+            <p class="required-field" [ngClass]="{ 'd-none':!errorState['email'] || email.valid}">Your name is required</p>
+          }
+          
+        </div>
+
+        <div class="form-control">
+          <textarea [(ngModel)]="contactData.message" rows="10" #message="ngModel" name="message" placeholder="Your message" minlength="10" required (click)="fieldClick(message, 'message')"></textarea>
+          @if (!message.valid && message.touched ) {
+            <p class="required-field">Your name is required</p>
+          }@else {
+            <p class="required-field" [ngClass]="{ 'd-none':!errorState['message'] || message.valid}">Your name is required</p>
+          }
+        </div>
       </article>
-      <div>
+      <div class="policy">
         <input type="checkbox" name="term">
-        <p>I've read the <a>privacy policy</a> and agree to the processing of my data as outlined</p>
+        <p class="required-field">I've read the <a>privacy policy</a> and agree to the processing of my data as outlined</p>
+      </div>
+      <div class="button-container">
+        <button type="submit">Send message :)</button>
       </div>
     </form>
   </article>

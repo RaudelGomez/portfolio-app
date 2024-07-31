@@ -64,23 +64,34 @@ section {
         display: flex;
         flex-direction: column;
         @extend .gap-form-field;
-        >input, textarea{
-          color: $whiteColor;
-                    margin: 0;
-                    padding: 15px 25px;
-                    border: 1px solid $purppleColor;
-                    border-radius: 10px;
-                    background-color: transparent;
-                    &::placeholder{
-                      color: $whiteColor;
-                      font-family: Poppins;
-                    }
+        div.form-control{
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          p.required-field{
+            color: $dangerColor;
           }
-          textarea{
-            resize: vertical;
-          }
+          >input, textarea{
+            color: $whiteColor;
+            margin: 0;
+            padding: 15px 25px;
+            border: 1px solid $purppleColor;
+            border-radius: 10px;
+            background-color: transparent;
+              &::placeholder{
+                color: $whiteColor;
+                font-family: Poppins;
+              }
+              &:hover{
+                border: 1px solid $greenColor;
+              }
+            }
+            textarea{
+              resize: vertical;
+            }
+        }
       }
-      >div{
+      >div.policy{
         display: flex;
         align-items: flex-start;
         gap: 8px;
@@ -96,6 +107,24 @@ section {
           }
         }
       }
+      >div.button-container{
+        @extend .d-flex-center;
+        button{
+          @include button();
+          color: $whiteColor;
+          transition: all 125ms ease-in-out;
+          border: unset;
+          cursor: pointer;
+          &:hover{
+            @include button($purppleColor);
+            transform: scale(1.2);
+          }
+        }
+      }
     }
 	}
+}
+
+.d-none{
+  display: none;
 }

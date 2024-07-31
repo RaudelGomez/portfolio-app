@@ -1,25 +1,184 @@
-@import '../../../helper.scss';
+@import "../../../helper.scss";
 
-section{
-  @include padding-top-bottom(64px);
-  >div{
-    @extend .d-flex-center;
-    gap: 32px;
-    h2{
-      margin: 0;
-    }
-    div{
-      height: 4px;
-      width:100%;
-      margin: 0;
-      padding: 0;
-      &.divider{
-        background-color: $purppleColor;
+// section{
+//   @include padding-top-bottom(64px);
+//   @extend .padding-web;
+//   >div{
+//     @extend .d-flex-center;
+//     gap: 32px;
+//     h2{
+//       margin: 0;
+//     }
+//     div{
+//       height: 4px;
+//       width:100%;
+//       margin: 0;
+//       padding: 0;
+//       &.divider{
+//         background-color: $purppleColor;
+//       }
+//     }
+//   }
+
+//   article{
+//     @extend .d-flex-center;
+//     gap: 80px;
+//     >div, form{
+//       flex: 1;
+//     }
+//   }
+// }
+
+// section{
+//   >article{
+//     display: flex;
+//     align-items: flex-start;
+//     justify-content: start;
+//     >div{
+//       display: flex;
+//       align-items: flex-start;
+//       justify-content: start;
+//       flex-direction: column;
+//       gap: 24px;
+//       >*{
+//         margin: 0;
+//       }
+//       h3{
+//         font-size: 32px;
+//         font-weight: 700;
+//       }
+//       >p{
+//         span{
+//           font-weight: 700;
+//         }
+//       }
+//     }
+//     form{
+//       width: 100%;
+//       >article{
+//         display: flex;
+//         flex-direction: column;
+//         gap: 24px;
+//         padding: 0 0 0 25px;
+//         margin: 0;
+//         width: 100%;
+//         //padding-left: 25px;
+//         >input, textarea{
+//           width: 100%;
+//           margin: 0;
+//           padding: 15px 25px;
+//           border: 1px solid $purppleColor;
+//           border-radius: 10px;
+//         }
+//       }
+//       >div{
+//         display: flex;
+//         align-items: flex-start;
+//         justify-content: flex-start;
+//         margin: 0;
+//         padding: 0;
+//         width: 100%;
+//         p{
+//           margin: 0;
+//           padding: 0;
+//         }
+//       }
+//     }
+//   }
+// }
+
+section {
+	@include padding-top-bottom(64px);
+	@extend .padding-web;
+	> div {
+		@extend .d-flex-center;
+		gap: 32px;
+		h2 {
+			margin: 0;
+		}
+		div {
+			height: 4px;
+			width: 100%;
+			margin: 0;
+			padding: 0;
+			&.divider {
+				background-color: $purppleColor;
+			}
+		}
+	}
+}
+
+.gap-form-field{
+  gap: 32px;
+}
+
+section {
+	> article {
+		@extend .d-flex-center;
+		gap: 80px;
+		> div {
+      flex: 1;
+			display: flex;
+      flex-direction: column;
+			align-items: flex-start;
+			justify-content: flex-start;
+			margin: 0;
+			padding: 0;
+      gap: 24px;
+			p {
+				margin: 0;
+				padding: 0;
+			}
+      h3{
+          font-size: 32px;
+          font-weight: 700;
+          margin: 0;
+        }
+      >p{
+        span{
+          font-weight: 700;
+        }
+      }
+		}
+
+    >form{
+      flex:1;
+      display: flex;
+      flex-direction: column;
+      @extend .gap-form-field;
+      >article{
+        flex:1;
+        display: flex;
+        flex-direction: column;
+        @extend .gap-form-field;
+        >input, textarea{
+                    margin: 0;
+                    padding: 15px 25px;
+                    border: 1px solid $purppleColor;
+                    border-radius: 10px;
+                    background-color: transparent;
+                    &::placeholder{
+                      color: $whiteColor;
+                      font-family: Poppins;
+                    }
+                  }
+      }
+      >div{
+        display: flex;
+        align-items: flex-start;
+        gap: 8px;
+        >input{
+          margin-top: 6px;
+          cursor: pointer;
+        }
+        >p{
+          margin: 0;
+          >a{
+            color: $purppleColor;
+            cursor: pointer;
+          }
+        }
       }
     }
-  }
-
-  article{
-    @extend .padding-web;
-  }
+	}
 }

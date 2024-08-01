@@ -75,16 +75,16 @@ section {
             color: $whiteColor;
             margin: 0;
             padding: 15px 25px;
-            border: 1px solid $purppleColor;
+            // border: 1px solid $purppleColor;
             border-radius: 10px;
             background-color: transparent;
-              &::placeholder{
-                color: $whiteColor;
-                font-family: Poppins;
-              }
-              &:hover{
-                border: 1px solid $greenColor;
-              }
+              // &::placeholder{
+              //   color: $whiteColor;
+              //   font-family: Poppins;
+              // }
+              // &:hover{
+              //   border: 1px solid $greenColor;
+              // }
             }
             textarea{
               resize: vertical;
@@ -128,3 +128,41 @@ section {
 .d-none{
   display: none;
 }
+
+//color inputs
+// section{
+//   article{
+//     form{
+//       article{
+//         div{
+//           input, textarea{
+//             border: 1px solid $purppleColor;
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+
+.color-field-success{
+  border: 1px solid $purppleColor;
+  &::placeholder{
+    color: $whiteColor;
+    font-family: Poppins;
+  }
+  &:hover{
+    border: 1px solid $greenColor;
+  }
+}
+
+.color-field-incomplete{
+  border: 1px solid $dangerColor;
+  &::placeholder{
+    color: $whiteColor;
+    font-family: Poppins;
+  }
+  &:hover{
+    border: 1px solid $dangerColor;
+  }
+}
+

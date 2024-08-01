@@ -2,7 +2,6 @@
 
 section {
 	@include padding-top-bottom(64px);
-	@extend .padding-web;
 	> div {
 		@extend .d-flex-center;
 		gap: 32px;
@@ -28,6 +27,7 @@ section {
 
 section {
 	> article {
+    @extend .padding-web;
 		@extend .d-flex-center;
     align-items: flex-start;
 		gap: 80px;
@@ -124,6 +124,13 @@ section {
       }
     }
 	}
+
+  >p{
+    margin-top: 56px;
+    @extend .padding-web;
+    @extend .d-flex-center;
+    justify-content: end;
+  }
 }
 
 .d-none{
@@ -188,6 +195,7 @@ div.policy{
     }
   }
 }
+
 
 
 

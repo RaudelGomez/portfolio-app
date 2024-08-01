@@ -2,6 +2,10 @@
 @import './fonts.scss';
 @import './helper.scss';
 
+html{
+  scroll-behavior: smooth;
+}
+
 body{
   position: relative;
   box-sizing: border-box;

@@ -2,12 +2,12 @@ import { Component } from '@angular/core';
 import { FooterComponent } from '../shared/footer/footer.component';
 
 @Component({
-  selector: 'app-imprint',
+  selector: 'app-policy',
   standalone: true,
   imports: [FooterComponent],
-  templateUrl: './imprint.component.html',
-  styleUrl: './imprint.component.scss'
+  templateUrl: './policy.component.html',
+  styleUrl: './policy.component.scss'
 })
-export class ImprintComponent {
+export class PolicyComponent {
 
 }

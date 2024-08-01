@@ -69,7 +69,7 @@
         <div class="container-policy">
           <input type="checkbox" name="term" (change)="onCheckboxChange($event)">
           <label for="term"></label>
-          <p class="required-field">I've read the <a>privacy policy</a> and agree to the processing of my data as outlined</p>
+          <p class="required-field">I've read the <a routerLink="policy">privacy policy</a> and agree to the processing of my data as outlined</p>
         </div>
         @if(name.valid && email.valid && message.valid && !isTermsAccepted){
           <p class="required-field">Please accept the privacy policy</p>

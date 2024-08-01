@@ -92,15 +92,20 @@ section {
         }
       }
       >div.policy{
-        display: flex;
-        align-items: flex-start;
-        gap: 8px;
-        >p{
-          margin: 0;
-          >a{
-            color: $purppleColor;
-            cursor: pointer;
+        div{
+          display: flex;
+          align-items: flex-start;
+          gap: 8px;
+          >p{
+            margin: 0;
+            >a{
+              color: $purppleColor;
+              cursor: pointer;
+            }
           }
+        }
+        >p.required-field{
+          color: $dangerColor;
         }
       }
       >div.button-container{

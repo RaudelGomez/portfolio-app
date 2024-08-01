@@ -1,0 +1,6 @@
+@import '../helper.scss';
+
+section{
+  @extend .max-width-web;
+  overflow: hidden;
+}

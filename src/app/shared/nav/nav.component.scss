@@ -11,6 +11,7 @@ a{
 }
 
 nav{
+  @extend .max-width-web;
   height: 112px;
   position: fixed;
   z-index: 100;

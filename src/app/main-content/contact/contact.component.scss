@@ -2,7 +2,7 @@
 
 section {
 	@include padding-top-bottom(112px);
-	> div {
+	> div.header {
 		@extend .d-flex-center;
 		gap: 32px;
     margin-bottom: 32px;
@@ -136,6 +136,31 @@ section {
     @extend .d-flex-center;
     justify-content: end;
   }
+}
+
+section{
+  position: relative;
+  div.message{
+    @extend .padding-web;
+    position: absolute;
+    left: 0;
+    right: 0;
+    @extend .d-flex-center;
+    >p{
+      font-size: 24px;
+      font-weight: 500;
+      background-color: rgba($color: $purppleColor, $alpha: 1.0);
+      padding: 15px 30px;
+      border-radius: 16px;
+      
+    }
+  }
+}
+
+.show-message{
+  opacity: 0;
+  pointer-events: none;
+  transition: all 125ms ease-in-out;
 }
 
 .d-none{

@@ -14,10 +14,6 @@ import { RouterModule } from '@angular/router';
 })
 export class ContactComponent {
 
-  constructor(){
-    //console.log(this.term);
-  }
-
   contactData: ContactData = {
     name: "",
     email: "",
@@ -45,18 +41,24 @@ export class ContactComponent {
     message: false
   } 
 
-  onCheckboxChange(event: Event): void {
-    this.isTermsAccepted = (event.target as HTMLInputElement).checked;
+  timePopUp:boolean = true;
+
+  // contactForm.valid && this.isTermsAccepted && contactForm.submitted
+  onSubmit(contactForm: NgForm){
+    if(true){
+      console.log(this.contactData);
+      this.timePopUp = false;
+      setTimeout(() => {
+        this.timePopUp = true;
+      }, 4000);
+    this.contactData.name = "";
+    this.contactData.email = "";
+    this.contactData.message = ""; 
+    }
   }
 
-  //isTextShowed:boolean = true;
-
-  //term:boolean = false;
-
-  onSubmit(contactForm: NgForm){
-    if(contactForm.valid && this.isTermsAccepted && contactForm.submitted){
-      console.log(this.contactData);
-    }
+  onCheckboxChange(event: Event): void {
+    this.isTermsAccepted = (event.target as HTMLInputElement).checked;
   }
 
   fieldClick(field: NgModel, fieldName: keyof typeof this.errorState, fieldInput: keyof typeof this.showInputStyle){

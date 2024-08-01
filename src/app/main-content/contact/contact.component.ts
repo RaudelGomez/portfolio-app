@@ -38,6 +38,12 @@ export class ContactComponent {
 
   isTermsAccepted = false;
 
+  firstTime ={
+    name: false,
+    email: false,
+    message: false
+  } 
+
   onCheckboxChange(event: Event): void {
     this.isTermsAccepted = (event.target as HTMLInputElement).checked;
   }
@@ -60,6 +66,7 @@ export class ContactComponent {
      
     }
     this.showInputStyle[fieldInput] = this.contactData[fieldInput];
+    this.firstTime[fieldInput] = true;
   }
 
   updateColor(field: keyof typeof this.showInputStyle){

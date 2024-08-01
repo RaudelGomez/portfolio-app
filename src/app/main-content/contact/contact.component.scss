@@ -65,26 +65,26 @@ section {
         flex-direction: column;
         @extend .gap-form-field;
         div.form-control{
+          position: relative;
           width: 100%;
           display: flex;
           flex-direction: column;
           p.required-field{
             color: $dangerColor;
           }
+          img{
+            width: 25px;
+            height: 25px;
+            position: absolute;
+            right: 24px;
+            top: 12px;
+          }
           >input, textarea{
             color: $whiteColor;
             margin: 0;
             padding: 15px 25px;
-            // border: 1px solid $purppleColor;
             border-radius: 10px;
             background-color: transparent;
-              // &::placeholder{
-              //   color: $whiteColor;
-              //   font-family: Poppins;
-              // }
-              // &:hover{
-              //   border: 1px solid $greenColor;
-              // }
             }
             textarea{
               resize: vertical;
@@ -95,11 +95,6 @@ section {
         display: flex;
         align-items: flex-start;
         gap: 8px;
-        // >input{
-        //   // margin-top: 6px;
-        //   // cursor: pointer;
-        //   display: none;
-        // }
         >p{
           margin: 0;
           >a{
@@ -134,21 +129,6 @@ section {
 .d-none{
   display: none;
 }
-
-//color inputs
-// section{
-//   article{
-//     form{
-//       article{
-//         div{
-//           input, textarea{
-//             border: 1px solid $purppleColor;
-//           }
-//         }
-//       }
-//     }
-//   }
-// }
 
 .color-field-success{
   border: 1px solid $purppleColor;
@@ -186,6 +166,8 @@ div.policy{
   position: relative;
   input[type="checkbox"]{
     position: absolute;
+    left: 1px;
+    top:2px;
     opacity: 0;
     z-index: 10;
   }
@@ -207,9 +189,6 @@ div.policy{
   }
 }
 
-button[disabled] {
-  cursor: not-allowed;
-  opacity: 0.5; /* Cambiar esto según el diseño deseado */
-}
+
 
 

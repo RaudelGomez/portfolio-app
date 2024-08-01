@@ -13,6 +13,14 @@
     <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
       <article>
         <div class="form-control">
+          @if(firstTime.name){
+            @if (!name.valid) {
+              <img src="../../../assets/img/warning.png" alt="warning">
+            }@else {
+              <img src="../../../assets/img/success.png" alt="success">
+            }
+          }
+      
           <input [ngClass]="{'color-field-success' : showInputStyle['name'], 'color-field-incomplete' : !showInputStyle['name'] }" [(ngModel)]="contactData.name" type="text" #name="ngModel" name="name" placeholder="Your name" required (click)="fieldClick(name, 'name', 'name')" (change)="updateColor('name')">
           @if (!name.valid && name.touched ) {
             <p class="required-field">Your name is required</p>
@@ -22,6 +30,14 @@
         </div>
         
         <div class="form-control">
+          @if(firstTime.email){
+            @if (!email.valid) {
+              <img src="../../../assets/img/warning.png" alt="warning">
+            }@else {
+              <img src="../../../assets/img/success.png" alt="success">
+            }
+          }
+          
           <input [ngClass]="{'color-field-success' : showInputStyle['email'], 'color-field-incomplete' : !showInputStyle['email']}" [(ngModel)]="contactData.email" type="email" #email="ngModel" name="email" placeholder="Your email" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" (click)="fieldClick(email, 'email', 'email')" (change)="updateColor('email')">
           
           @if (!email.valid && email.touched ) {
@@ -33,6 +49,14 @@
         </div>
 
         <div class="form-control">
+          @if(firstTime.message){
+            @if (!message.valid) {
+              <img src="../../../assets/img/warning.png" alt="warning">
+            }@else {
+              <img src="../../../assets/img/success.png" alt="success">
+            }
+          }
+
           <textarea [ngClass]="{'color-field-success' : showInputStyle['message'], 'color-field-incomplete' : !showInputStyle['message'] }" [(ngModel)]="contactData.message" rows="10" #message="ngModel" name="message" placeholder="Your message" minlength="10" required (click)="fieldClick(message, 'message', 'message')" (change)="updateColor('message')"></textarea>
           @if (!message.valid && message.touched ) {
             <p class="required-field">Your message is empty or is smaller than 10 letter</p>

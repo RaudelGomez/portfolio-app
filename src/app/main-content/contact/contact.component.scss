@@ -95,10 +95,11 @@ section {
         display: flex;
         align-items: flex-start;
         gap: 8px;
-        >input{
-          margin-top: 6px;
-          cursor: pointer;
-        }
+        // >input{
+        //   // margin-top: 6px;
+        //   // cursor: pointer;
+        //   display: none;
+        // }
         >p{
           margin: 0;
           >a{
@@ -109,7 +110,7 @@ section {
       }
       >div.button-container{
         @extend .d-flex-center;
-        button{
+        button.active{
           @include button();
           color: $whiteColor;
           transition: all 125ms ease-in-out;
@@ -119,6 +120,11 @@ section {
             @include button($purppleColor);
             transform: scale(1.2);
           }
+        }
+        button.disabled{
+          @include button($grayColor);
+          color: $whiteColor;
+          border: unset;
         }
       }
     }
@@ -165,4 +171,45 @@ section {
     border: 1px solid $dangerColor;
   }
 }
+
+.checkbox{
+  width: 24px;
+  height: 24px;
+  display: block;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  transition: all 75ms ease-in-out;
+}
+
+//checkbox
+div.policy{
+  position: relative;
+  input[type="checkbox"]{
+    position: absolute;
+    opacity: 0;
+    z-index: 10;
+  }
+
+  input[type="checkbox"]+label{
+    @extend .checkbox;
+    background-image: url("../../../assets/img/unchecked.png");
+    &:hover{
+      background-image: url("../../../assets/img/unchecked_hover.png");
+    }
+  }
+
+  input[type="checkbox"]:checked+label{
+    @extend .checkbox;
+    background-image: url("../../../assets/img/checked.png");
+    &:hover{
+      background-image: url("../../../assets/img/checked_hover.png");
+    }
+  }
+}
+
+button[disabled] {
+  cursor: not-allowed;
+  opacity: 0.5; /* Cambiar esto según el diseño deseado */
+}
+
 

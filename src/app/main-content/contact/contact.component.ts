@@ -3,7 +3,6 @@ import { FormsModule, NgForm, NgModel } from '@angular/forms';
 import { ContactData } from '../../interfaces/contact-data';
 import { CommonModule } from '@angular/common';
 import { ErrorState } from '../../interfaces/error-state';
-import { BehaviorSubject } from 'rxjs';
 
 @Component({
   selector: 'app-contact',
@@ -13,6 +12,10 @@ import { BehaviorSubject } from 'rxjs';
   styleUrl: './contact.component.scss'
 })
 export class ContactComponent {
+
+  constructor(){
+    //console.log(this.term);
+  }
 
   contactData: ContactData = {
     name: "",
@@ -33,10 +36,18 @@ export class ContactComponent {
     message: "true true true true"
   }
 
-  isTextShowed:boolean = true;
+  isTermsAccepted = false;
+
+  onCheckboxChange(event: Event): void {
+    this.isTermsAccepted = (event.target as HTMLInputElement).checked;
+  }
+
+  //isTextShowed:boolean = true;
+
+  //term:boolean = false;
 
   onSubmit(contactForm: NgForm){
-    if(contactForm.valid && contactForm.submitted){
+    if(contactForm.valid && this.isTermsAccepted && contactForm.submitted){
       console.log(this.contactData);
     }
   }

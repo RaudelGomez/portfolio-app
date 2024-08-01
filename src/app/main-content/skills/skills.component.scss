@@ -6,7 +6,7 @@ section{
   align-items: flex-start;
   gap: 92px;
   @extend .padding-web;
-  @include padding-top-bottom(64px);
+  @include padding-top-bottom(112px);
   position: relative;
   // z-index: 100;
   .icons{

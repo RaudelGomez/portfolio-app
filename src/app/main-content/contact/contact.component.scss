@@ -1,7 +1,7 @@
 @import "../../../helper.scss";
 
 section {
-	@include padding-top-bottom(64px);
+	@include padding-top-bottom(112px);
 	> div {
 		@extend .d-flex-center;
 		gap: 32px;

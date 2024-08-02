@@ -9,6 +9,13 @@ section{
   @include padding-top-bottom(112px);
   position: relative;
   // z-index: 100;
+  .text-skill-mobile{
+    display: none;
+    h2{
+      margin-bottom: 0;
+      //font-size: 54px
+    }
+  }
   .icons{
     @extend .d-flex-center;
     justify-content: flex-start;
@@ -187,6 +194,25 @@ section{
     transition: all 125ms ease-in-out;
     &:hover{
       transform: translateY(-25px);
+    }
+  }
+}
+
+@media (max-width: 1100px){
+  section{
+    flex-direction: column;
+    .text-skill-mobile{
+      display: flex;
+      flex-direction: column;
+      align-items: end;
+    }
+    .text-container{
+      h2{
+        display: none;
+      }
+      h2+p{
+        display: none;
+      }
     }
   }
 }

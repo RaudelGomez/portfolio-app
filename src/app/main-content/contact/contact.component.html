@@ -13,7 +13,7 @@
     <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
       <article>
         <div class="form-control">
-          @if(firstTime.name){
+          @if(firstTimeIcon.name){
             @if (!name.valid) {
               <img src="../../../assets/img/warning.png" alt="warning">
             }@else {
@@ -21,16 +21,20 @@
             }
           }
       
-          <input [ngClass]="{'color-field-success' : showInputStyle['name'], 'color-field-incomplete' : !showInputStyle['name'] }" [(ngModel)]="contactData.name" type="text" #name="ngModel" name="name" placeholder="Your name" required (click)="fieldClick(name, 'name', 'name')" (change)="updateColor('name')">
-          @if (!name.valid && name.touched ) {
-            <p class="required-field">Your name is required</p>
-          }@else {
-            <p class="required-field" [ngClass]="{ 'd-none':!errorState['name'] || name.valid}">Your name is required</p>
+          <input [ngClass]="{'color-field-success' : showInputStyle['name'], 'color-field-incomplete' : !showInputStyle['name'] }" [(ngModel)]="contactData.name" type="text" #name="ngModel" name="name" placeholder="Your name" required (click)="fieldClick(name, 'name', 'name', 'name', true)" (change)="updateColor('name')">
+
+          
+          @if(firstTimeMessage.name){
+            @if (!name.valid && name.touched ) {
+              <p class="required-field">Your name is required</p>
+            }@else {
+              <p class="required-field" [ngClass]="{ 'd-none':!errorState['name'] || name.valid}">Your name is required</p>
+            }
           }
         </div>
         
         <div class="form-control">
-          @if(firstTime.email){
+          @if(firstTimeIcon.email){
             @if (!email.valid) {
               <img src="../../../assets/img/warning.png" alt="warning">
             }@else {
@@ -38,18 +42,20 @@
             }
           }
           
-          <input [ngClass]="{'color-field-success' : showInputStyle['email'], 'color-field-incomplete' : !showInputStyle['email']}" [(ngModel)]="contactData.email" type="email" #email="ngModel" name="email" placeholder="Your email" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" (click)="fieldClick(email, 'email', 'email')" (change)="updateColor('email')">
+          <input [ngClass]="{'color-field-success' : showInputStyle['email'], 'color-field-incomplete' : !showInputStyle['email']}" [(ngModel)]="contactData.email" type="email" #email="ngModel" name="email" placeholder="Your email" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" (click)="fieldClick(email, 'email', 'email', 'email', true)" (change)="updateColor('email')">
           
-          @if (!email.valid && email.touched ) {
-            <p class="required-field">You must write a valid email</p>
-          }@else {
-            <p class="required-field" [ngClass]="{ 'd-none':!errorState['email'] || email.valid}">Your email is required</p>
+          @if(firstTimeMessage.email){
+            @if (!email.valid && email.touched ) {
+              <p class="required-field">You must write a valid email</p>
+            }@else {
+              <p class="required-field" [ngClass]="{ 'd-none':!errorState['email'] || email.valid}">Your email is required</p>
+            }
           }
           
         </div>
 
         <div class="form-control">
-          @if(firstTime.message){
+          @if(firstTimeIcon.message){
             @if (!message.valid) {
               <img src="../../../assets/img/warning.png" alt="warning">
             }@else {
@@ -57,11 +63,14 @@
             }
           }
 
-          <textarea [ngClass]="{'color-field-success' : showInputStyle['message'], 'color-field-incomplete' : !showInputStyle['message'] }" [(ngModel)]="contactData.message" rows="10" #message="ngModel" name="message" placeholder="Your message" minlength="10" required (click)="fieldClick(message, 'message', 'message')" (change)="updateColor('message')"></textarea>
-          @if (!message.valid && message.touched ) {
-            <p class="required-field">Your message is empty or is smaller than 10 letter</p>
-          }@else {
-            <p class="required-field" [ngClass]="{ 'd-none':!errorState['message'] || message.valid}">Your message is empty</p>
+          <textarea [ngClass]="{'color-field-success' : showInputStyle['message'], 'color-field-incomplete' : !showInputStyle['message'] }" [(ngModel)]="contactData.message" rows="10" #message="ngModel" name="message" placeholder="Your message" minlength="10" required (click)="fieldClick(message, 'message', 'message', 'message', true)" (change)="updateColor('message')"></textarea>
+
+          @if(firstTimeMessage.message){
+            @if (!message.valid && message.touched ) {
+              <p class="required-field">Your message is empty or is smaller than 10 letter</p>
+            }@else {
+              <p class="required-field" [ngClass]="{ 'd-none':!errorState['message'] || message.valid}">Your message is empty</p>
+            }
           }
         </div>
       </article>
@@ -75,8 +84,9 @@
           <p class="required-field">Please accept the privacy policy</p>
         }
       </div>
+    
       <div class="button-container">
-        @if(isTermsAccepted && name.valid && email.valid && message.valid){
+        @if(isTermsAccepted && email.valid && message.valid && name.valid ){
           <button class="active"  type="submit">Send message :)</button>
         }@else {
           <button class="disabled"  type="submit">Send message :)</button>

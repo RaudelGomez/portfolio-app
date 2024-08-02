@@ -28,48 +28,68 @@ export class ContactComponent {
 
 
   showInputStyle = {
-    name: "true",
+    name: "name",
     email: "rau@gmail.com",
     message: "true true true true"
   }
 
   isTermsAccepted = false;
 
-  firstTime ={
+  firstTimeIcon ={
     name: false,
     email: false,
     message: false
   } 
 
+  firstTimeMessage ={
+    name: false,
+    email: false,
+    message: false
+  }
+  
+
   timePopUp:boolean = true;
 
-  // contactForm.valid && this.isTermsAccepted && contactForm.submitted
   onSubmit(contactForm: NgForm){
-    if(true){
+    if(contactForm.valid && this.isTermsAccepted && contactForm.submitted){
       console.log(this.contactData);
       this.timePopUp = false;
       setTimeout(() => {
         this.timePopUp = true;
       }, 4000);
+    this.resetValueInput();
+    }
+  }
+
+  resetValueInput(){
     this.contactData.name = "";
     this.contactData.email = "";
     this.contactData.message = ""; 
-    }
+    this.firstTimeIcon.name = false;
+    this.firstTimeIcon.email = false;
+    this.firstTimeIcon.message = false;
+    this.firstTimeMessage.name = false;
+    this.firstTimeMessage.email = false;
+    this.firstTimeMessage.message = false;
   }
 
   onCheckboxChange(event: Event): void {
     this.isTermsAccepted = (event.target as HTMLInputElement).checked;
   }
 
-  fieldClick(field: NgModel, fieldName: keyof typeof this.errorState, fieldInput: keyof typeof this.showInputStyle){
-    if(!field.value){
-      this.errorState[fieldName] = true;
-    }else{
-      this.errorState[fieldName] = false;
-     
+  fieldClick(field: NgModel, fieldName: keyof typeof this.errorState, fieldInput: keyof typeof this.showInputStyle, fieldMessage: keyof typeof this.firstTimeMessage, firstTimeMessage:boolean){
+    this.firstTimeMessage[fieldMessage] = true;
+    if(firstTimeMessage){
+      if(!field.value){
+        this.errorState[fieldName] = true;
+      }else{
+        this.errorState[fieldName] = false;
+       
+      }
     }
+    
     this.showInputStyle[fieldInput] = this.contactData[fieldInput];
-    this.firstTime[fieldInput] = true;
+    this.firstTimeIcon[fieldInput] = true;
   }
 
   updateColor(field: keyof typeof this.showInputStyle){

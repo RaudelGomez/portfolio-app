@@ -71,6 +71,7 @@ export class ContactComponent {
     this.firstTimeMessage.name = false;
     this.firstTimeMessage.email = false;
     this.firstTimeMessage.message = false;
+    this.isTermsAccepted = false;
   }
 
   onCheckboxChange(event: Event): void {

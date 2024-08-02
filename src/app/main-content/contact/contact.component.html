@@ -75,7 +75,7 @@
       </article>
       <div class="policy">
         <div class="container-policy">
-          <input type="checkbox" name="term" (change)="onCheckboxChange($event)">
+          <input type="checkbox" [checked]="isTermsAccepted" name="term" (change)="onCheckboxChange($event)">
           <label for="term"></label>
           <p class="required-field">I've read the <a routerLink="policy">privacy policy</a> and agree to the processing of my data as outlined</p>
         </div>
@@ -101,7 +101,12 @@
     </p>
   </div>
   <p>
-    <a href="#home"><img src="../../../assets/img/go-up-arrow.png" alt=""></a>
+    <a href="#home">
+      <svg viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect class="rectgreenColor" x="1" y="1" width="37" height="37" rx="18.5" stroke="white" stroke-width="2"/>
+        <path class="greenColor" d="M18 15.828L13.343 20.485C12.9526 20.8755 12.3195 20.8755 11.929 20.485C11.5386 20.0945 11.5386 19.4615 11.929 19.071L18.2929 12.7071C18.6834 12.3166 19.3166 12.3166 19.7071 12.7071L26.071 19.071C26.4615 19.4615 26.4615 20.0945 26.071 20.485C25.6806 20.8755 25.0475 20.8755 24.657 20.485L20 15.828L20 27C20 27.5523 19.5523 28 19 28C18.4477 28 18 27.5523 18 27L18 15.828Z" fill="white"/>
+      </svg>
+    </a>
   </p>
   <img class="purpple-img" src="../../../assets/img/bg4.png" alt="purpple-img">
 </section>

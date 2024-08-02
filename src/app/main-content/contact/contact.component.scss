@@ -131,10 +131,24 @@ section {
 	}
 
   >p{
+    position: relative;
     margin-top: 56px;
     @extend .padding-web;
     @extend .d-flex-center;
     justify-content: end;
+    z-index: 100;
+    transition: all 125ms ease-in-out;
+    svg{
+      width: 39px;
+      height: 39px;
+      &:hover .greenColor{
+        stroke: $greenColor;
+        fill: $greenColor;
+      }
+      &:hover .rectgreenColor{
+        stroke: $greenColor;
+      }
+    }
   }
 }
 
@@ -145,6 +159,7 @@ section{
     position: absolute;
     left: 0;
     right: 0;
+    z-index: 0;
     @extend .d-flex-center;
     >p{
       font-size: 24px;
@@ -152,7 +167,6 @@ section{
       background-color: rgba($color: $purppleColor, $alpha: 1.0);
       padding: 15px 30px;
       border-radius: 16px;
-      
     }
   }
 }
@@ -229,7 +243,7 @@ div.policy{
 //Background image
 section{
   overflow: hidden;
-  img.purpple-img{
+  >img.purpple-img{
     position: absolute;
     z-index: -100;
     bottom: -450px;

@@ -124,3 +124,13 @@ section{
     }
   }
 }
+
+section{
+  >img{
+    position: absolute;
+    top: 0;
+    right: -500px;
+    z-index: -10;
+    @extend .opacity-bg-color;
+  }
+}

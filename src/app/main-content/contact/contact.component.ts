@@ -87,7 +87,6 @@ export class ContactComponent {
        
       }
     }
-    
     this.showInputStyle[fieldInput] = this.contactData[fieldInput];
     this.firstTimeIcon[fieldInput] = true;
   }

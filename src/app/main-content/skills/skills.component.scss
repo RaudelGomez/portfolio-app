@@ -72,20 +72,12 @@ section{
       }
     }
   }
-  // >article{
-  //   width: 100px;
-  //   height: 100px;
-  //   position: absolute;
-  //   bottom: 0;
-  //   left: 0;
-  //   z-index: 1000;
-  //   background-image: url('../../../assets/img/background_hero.png');
-  // }
   >img{
     position: absolute;
     left: -320px;
     bottom: -330px;
     width: 500px;
+    @extend .opacity-bg-color;
   }
 }
 
@@ -94,11 +86,9 @@ section{
   z-index: 10;
   .colorSvg{
     fill: $purppleColor;
-    //transition: all 125ms ease-in-out;
   }
   figcaption{
     color: $purppleColor;
-    //transition: all 125ms ease-in-out;
   }
   figure{
     position: absolute;
@@ -201,31 +191,3 @@ section{
   }
 }
 
-// .icon-continue-learning:hover{
-//   .colorSvg{
-//     fill: $whiteColor;
-//   }
-// }
-
-// .icon-continue-learning:hover~ figcaption{
-//     color: $whiteColor;
-// }
-
-// .icon-continue-learning:hover+ figure{
-//   display: block;
-// }
-
-// .svgContainer{
-//   figcaption:hover+ figure {
-//       display: unset;
-//   }
-// }
-
-// svg.react-icon{
-//   position: relative !important;
-//   width: 100%;
-//   height: 100%;
-//   position: absolute;
-//   left: 20px;
-//   top: 10px;
-// }

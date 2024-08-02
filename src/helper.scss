@@ -26,8 +26,12 @@ $grayColor: #B6B6B6;
 }
 
 .max-width-web{
-  max-width: 1920px;
+  max-width: 1440px;
   margin: 0 auto;
+}
+
+.opacity-bg-color{
+  opacity: 0.8;
 }
 
 @mixin button($color: $greenColor, $paddingY: 15px, $paddingX: 30px ){

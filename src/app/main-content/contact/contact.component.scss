@@ -226,6 +226,18 @@ div.policy{
   }
 }
 
+//Background image
+section{
+  overflow: hidden;
+  img.purpple-img{
+    position: absolute;
+    z-index: -100;
+    bottom: -450px;
+    left: -350px;
+    @extend .opacity-bg-color;
+  }
+}
+
 
 
 

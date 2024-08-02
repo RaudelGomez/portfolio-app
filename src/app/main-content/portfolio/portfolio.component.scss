@@ -257,7 +257,7 @@ div.slide-partner-container{
   }
 }
 
-div.divider-partrner{
+div.divider-partner{
   width: 188px;
   height: 4px;
   background-color: $purppleColor;
@@ -297,5 +297,24 @@ div.divider-partrner{
       @extend .pointslide;
       background-color: $purppleColor;
     }
+  }
+}
+
+section{
+  img.purpple-img{
+    position: absolute;
+    z-index: -100;
+    top: 650px;
+    left: -350px;
+    @extend .opacity-bg-color;
+  }
+
+  img.green-img{
+    position: absolute;
+    z-index: -100;
+    bottom: 0;
+    right: -550px;
+    transform: rotate(140deg);
+    @extend .opacity-bg-color;
   }
 }

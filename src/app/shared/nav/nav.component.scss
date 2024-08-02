@@ -21,6 +21,19 @@ nav{
   background-color: $bgColor;
   >a{
     font-size: 32px;
+    display: flex;
+    align-items: center;
+    gap: 0;
+    position: relative;
+    img{
+      width: 64px;
+    }
+    span{
+      position: absolute;
+      bottom: -7px;
+      left:53px;
+    }
+    
   }
   padding: 0 88px;
   @extend .d-flex-center;

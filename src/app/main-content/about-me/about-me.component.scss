@@ -134,3 +134,65 @@ section{
     @extend .opacity-bg-color;
   }
 }
+
+
+@media (max-width: 1100px){
+  section{
+    .icons-social-network{
+      gap: 16px;
+      >div.divider, >div.div-save-place{
+        flex:1;
+      }
+      .divider{
+        width: auto;
+      }
+      .icons-container{
+        gap: 16px;
+        >a{
+          display: none;
+        }
+      }
+    }
+
+    .contaniner-img-divider{
+      display: none;
+    }
+
+    .about-me-container{
+      .div-save-place{
+        display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 700px){
+  section{
+    .about-me-container{
+      h2{
+        font-size: 45px;
+      }
+      >div{
+        .text-about-me{
+          >div{
+            figure{
+              margin: 16px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 380px){
+  section{
+    .about-me-container{
+      h2{
+        font-size: 32px;
+      }
+    }
+  }
+}
+
+

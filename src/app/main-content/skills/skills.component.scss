@@ -101,6 +101,9 @@ section{
     display: flex;
     align-items: center;
     gap: 24px;
+    h2{
+      margin-bottom: 0;
+    }
     .divider-h2{
       background-color: $purppleColor;
       height: 4px;

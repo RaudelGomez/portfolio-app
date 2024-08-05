@@ -35,8 +35,8 @@ $grayColor: #B6B6B6;
   opacity: 0.8;
 }
 
-@mixin button($color: $greenColor, $paddingY: 15px, $paddingX: 30px ){
-  font-size: 24px;
+@mixin button($color: $greenColor, $paddingY: 15px, $paddingX: 30px, $fs: 24px ){
+  font-size: $fs;
   font-weight: 400;
   background-color: $color;
   padding: $paddingY $paddingX;

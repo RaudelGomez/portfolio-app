@@ -19,6 +19,9 @@ nav{
   left: 0;
   right: 0;
   background-color: $bgColor;
+  padding: 0 88px;
+  @extend .d-flex-center;
+  justify-content: space-between;
   >a{
     font-size: 32px;
     display: flex;
@@ -34,11 +37,41 @@ nav{
       left:53px;
     }
   }
-  padding: 0 88px;
-  @extend .d-flex-center;
-  justify-content: space-between;
+  >div{
+    img{
+      display: none;
+      cursor: pointer;
+      width: 30px;
+    }
+  }
   div{
     @extend .d-flex-center;
     gap: 32px;
+  }
+}
+
+@media (max-width: 1100px){
+  nav{
+    >div{
+      a.mobile-version{
+        display: none;
+      }
+      img.mobile-version{
+        display: block;
+      }
+    }
+  }
+}
+
+@media (max-width: 700px){
+  nav{
+    >a{
+      span{
+        display: none;
+      }
+    }
+    padding: 0 48px;
+    @extend .d-flex-center;
+    justify-content: space-between;
   }
 }

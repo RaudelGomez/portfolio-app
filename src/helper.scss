@@ -48,3 +48,9 @@ $grayColor: #B6B6B6;
   padding-top: $value;
   padding-bottom: $value;
 }
+
+@media (max-width: 700px){
+  .padding-web{
+    padding: 0 24px;
+  }
+}

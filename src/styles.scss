@@ -32,3 +32,9 @@ h2{
     font-size: 45px;
   }
 }
+
+@media (max-width: 380px){
+      h2{
+        font-size: 32px;
+      }
+}

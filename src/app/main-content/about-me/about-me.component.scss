@@ -169,9 +169,6 @@ section{
 @media (max-width: 700px){
   section{
     .about-me-container{
-      h2{
-        //font-size: 45px;
-      }
       >div{
         .text-about-me{
           >div{
@@ -185,14 +182,5 @@ section{
   }
 }
 
-@media (max-width: 380px){
-  section{
-    .about-me-container{
-      h2{
-        font-size: 32px;
-      }
-    }
-  }
-}
 
 

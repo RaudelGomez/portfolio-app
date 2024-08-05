@@ -56,10 +56,11 @@ section{
       @extend .d-flex-center;
       justify-content: space-around;
       gap:46px;
+      width:100%;
       figure.normal-figure{
         margin: 0;
-        width: 620px;
-        height: 339px;
+        max-width: 620px;
+        max-height: 339px;
         flex:1;
         @extend .d-flex-center;
         justify-content: flex-end;
@@ -72,13 +73,13 @@ section{
         }
       }
       div.normal-div{
-        >*{
-          margin: 0;
-        }
         flex: 1;
         display: flex;
         flex-direction: column;
         gap:15px;
+        >*{
+          margin: 0;
+        }
         h4{
           font-size: 32px;
           font-weight: 700;
@@ -316,5 +317,144 @@ section{
     right: -550px;
     transform: rotate(140deg);
     @extend .opacity-bg-color;
+  }
+}
+
+
+@media (max-width: 1100px){
+  section{
+    article{
+      >div{
+        @extend .d-flex-center;
+        flex-direction: column;
+        justify-content: space-around;
+        gap:0px;
+        width:100%;
+        figure.normal-figure{
+          margin: 0;
+          max-width: 620px;
+          max-height: 339px;
+          flex:1;
+          @extend .d-flex-center;
+          justify-content: center;
+          img{
+            margin-top: -50px;
+            width: 50%;
+            height: 100%;
+            object-fit: contain;
+            object-position: center;
+          }
+        }
+        div.normal-div{
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          gap:15px;
+          width: auto;
+          >*{
+            margin: 0;
+          }
+          h4{
+            font-size: 32px;
+            font-weight: 700;
+            color: $purppleColor;
+          }
+          h5{
+            font-size: 24px;
+            font-weight: 400;
+            color: $greenColor;
+          }
+          p{
+            font-size: 16px;
+            font-weight: 400;
+          }
+          >div{
+            @extend .d-flex-center;
+            justify-content: center;
+            gap:88px;
+            a{
+              @include button($purppleColor);
+              transition: all 125ms ease-in-out;
+              &:hover{
+                transform: scale(1.2);
+                @include button($greenColor);
+              }
+            }
+            a:last-child{
+              @include button(transparent);
+              border: 1px solid $greenColor;
+              transition: all 125ms ease-in-out;
+              &:hover{
+                transform: scale(1.2);
+                @include button($greenColor);
+              }
+            }
+          }
+        }
+  
+        // figure.invert-figure{
+        //   margin: 0;
+        //   width: 620px;
+        //   height: 339px;
+        //   flex:1;
+        //   @extend .d-flex-center;
+        //   justify-content: flex-start;
+        //   img{
+        //     margin-top: -50px;
+        //     width: 50%;
+        //     height: 100%;
+        //     object-fit: contain;
+        //     object-position: center;
+        //   }
+        // }
+  
+        // div.invert-div{
+        //   >*{
+        //     margin: 0;
+        //     @extend .text-end;
+        //   }
+        //   flex: 1;
+        //   display: flex;
+        //   flex-direction: column;
+        //   gap:15px;
+        //   h4{
+        //     font-size: 32px;
+        //     font-weight: 700;
+        //     color: $purppleColor;
+        //   }
+        //   h5{
+        //     font-size: 24px;
+        //     font-weight: 400;
+        //     color: $greenColor;
+        //   }
+        //   p{
+        //     font-size: 16px;
+        //     font-weight: 400;
+        //   }
+        //   >div{
+        //     @extend .d-flex-center;
+        //     justify-content: flex-end;
+        //     gap:88px;
+        //     a{
+        //       @include button($purppleColor);
+        //       transition: all 125ms ease-in-out;
+        //       &:hover{
+        //         transform: scale(1.2);
+        //         @include button($greenColor);
+        //       }
+        //     }
+        //     a:last-child{
+        //       @include button(transparent);
+        //       border: 1px solid $greenColor;
+        //       transition: all 125ms ease-in-out;
+        //       &:hover{
+        //         transform: scale(1.2);
+        //         @include button($greenColor);
+        //       }
+        //     }
+        //   }
+        // }
+      }
+    }
   }
 }

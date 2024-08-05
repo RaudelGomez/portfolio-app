@@ -1,5 +1,7 @@
 @import '../../../helper.scss';
 
+// rotate: -180deg; writing-mode: vertical-rl;
+
 section{
   display: flex;
   position: relative;
@@ -64,7 +66,7 @@ section{
     position: relative;
     z-index: 10;
     margin-top: -150px;
-    margin-left: -250px;
+    //margin-left: -250px;
     filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.5));
     .sub-container{
       >div{
@@ -74,14 +76,17 @@ section{
         gap: 24px;
         position: relative;
         >span{
-          margin-top: -10px;
-          padding-top: 0;
-          height: 0;
-          display: flex;
-          transform: rotate(270deg);
+          rotate: -180deg; 
+          writing-mode: vertical-rl;
+          // margin-top: -10px;
+          // padding-top: 0;
+          // height: 0;
+          // display: flex;
+          // transform: rotate(270deg);
           font-size: 54px;
           font-weight: 400;
-          transform-origin: center;
+          // transform-origin: center;
+
         }
         >div{
           margin: 0;
@@ -155,14 +160,41 @@ section{
   background-image: url('../../../assets/img/background_hero.png');
 }
 
-@media (max-width: 1300px){
+@media (max-width: 1450px){
+  section{
+    .container-data{
+      .sub-container{
+        >div{
+          >span{
+            font-size: 44px;
+          }
+        } 
+      }
+    }
+  }
+  .info{
+    .name{
+      font-size: 44px;
+      font-weight: 700;
+      line-height: 1;
+    }
+    
+    .job{
+      font-size: 44px;
+      font-weight: 400;
+      color: $purppleColor;
+    }
+  }  
+}
+
+@media (max-width: 1350px){
   section{
     flex-direction: column;
     align-items: center;
     .aot{
       >figure{
         img.me{
-          bottom: -120px;
+          bottom: -150px;
         }
       }
     }
@@ -182,7 +214,7 @@ section{
         //@extend .d-flex-center;
         gap: 24px;
         >span{
-          margin-top: -10px;
+          // margin-top: -10px;
           // padding-top: 0;
           // height: 0;
           // display: flex;
@@ -212,8 +244,131 @@ section{
   }
 }
 
+@media (max-width: 750px){
+  section{
+    >p{
+      display: none;
+    }
+    .container-data{
+      .sub-container{
+        >div{
+          >span{
+            font-size: 28px;
+          }
+        } 
+      }
+    }
+  }
+  .info{
+    .name{
+      font-size: 28px;
+      font-weight: 700;
+      line-height: 1;
+    }
+    
+    .job{
+      font-size: 28px;
+      font-weight: 400;
+      color: $purppleColor;
+    }
+  }
+}
+
+@media (max-width: 500px){
+  section{
+    .aot{
+      >figure{
+        img.me{
+          bottom: -250px;
+        }
+        img.bg-color-aot{
+          position: absolute;
+          width: 120%;
+          height: 90%;
+          left: 0;
+          right: 0;
+          bottom: -1100px;
+          top: 200px;
+          z-index: -10;
+        }
+      }
+    }
+
+    // .curve-slide{
+    //   top: 0;
+    //   left:0;
+    //   right: 0;
+    //   bottom: -600px;
+    // }
+  }
+}
+
+@media (max-width: 440px){
+  section{
+    .container-data{
+      .sub-container{
+        >div{
+          >span{
+            font-size: 24px;
+          }
+        } 
+      }
+    }
+  }
+  .info{
+    .name{
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 1;
+    }
+    
+    .job{
+      font-size: 18px;
+      font-weight: 400;
+      color: $purppleColor;
+    }
+  }
+}
 
 
+@media (max-width: 360px){
+  section{
+    .aot{
+      >figure{
+        img.me{
+          bottom: -340px;
+        }
+        img.bg-color-aot{
+          position: absolute;
+          width: 120%;
+          height: 90%;
+          left: 0;
+          right: 0;
+          bottom: -1100px;
+          top: 280px;
+          z-index: -10;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-height: 700px) {
+  .curve-slide{
+      top: 0;
+      left:0;
+      right: 0;
+      bottom: -670px;
+    }
+}
+
+
+ // .curve-slide{
+    //   top: 0;
+    //   left:0;
+    //   right: 0;
+    //   bottom: -670px;
+    // }
 
 
 

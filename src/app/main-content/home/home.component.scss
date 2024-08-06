@@ -38,13 +38,13 @@ section{
       max-width: 600px;
       height: 100%;
       position: relative;
+      bottom: -80px;
       img.me{
         object-fit: contain;
         object-position: center;
         width: 100%;
         height: 100%;
         position: relative;
-        bottom: -20px;
       }
       img.bg-color-aot{
         position: absolute;
@@ -162,6 +162,11 @@ section{
 
 @media (max-width: 1450px){
   section{
+    .aot{
+      figure{
+        bottom: 0;
+      }
+    }
     .container-data{
       .sub-container{
         >div{
@@ -344,12 +349,23 @@ section{
   }
 }
 
-@media only screen and (max-height: 700px) {
+@media only screen and (max-height: 1000px) {
   .curve-slide{
       top: 0;
       left:0;
       right: 0;
-      bottom: -670px;
+      bottom: -470px;
+    }
+    .aot{
+      >figure{
+        top: -50px;
+      }
+    }
+    
+    section{
+      div{
+        padding-top: 0;
+      }
     }
 }
 

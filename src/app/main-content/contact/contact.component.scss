@@ -190,6 +190,10 @@ section{
   &:hover{
     border: 1px solid $greenColor;
   }
+  &:focus{
+    outline: none;
+    border-color: $greenColor;
+  }
 }
 
 .color-field-incomplete{
@@ -201,11 +205,15 @@ section{
   &:hover{
     border: 1px solid $dangerColor;
   }
+  &:focus{
+    outline: none;
+    border-color: $dangerColor;
+  }
 }
 
 .checkbox{
-  width: 24px;
-  height: 24px;
+  width: 32px;
+  height: 32px;
   display: block;
   cursor: pointer;
   background-repeat: no-repeat;
@@ -249,6 +257,165 @@ section{
     bottom: -450px;
     left: -350px;
     @extend .opacity-bg-color;
+  }
+}
+
+
+@media (max-width: 1100px){
+  section {
+    > article {
+      // @extend .padding-web;
+      // @extend .d-flex-center;
+      flex-direction: column;
+      //align-items: flex-start;
+      gap: 48px;
+      //width: 100%;
+      // > div {
+      //   flex: 1;
+      //   display: flex;
+      //   flex-direction: column;
+      //   margin: 0;
+      //   padding: 0;
+      //   gap: 24px;
+      //   p {
+      //     margin: 0;
+      //     padding: 0;
+      //   }
+      //   h3{
+      //       font-size: 32px;
+      //       font-weight: 700;
+      //       margin: 0;
+      //     }
+      //   >p{
+      //     span{
+      //       font-weight: 700;
+      //     }
+      //   }
+      // }
+  
+      >form{
+        // flex:1;
+        width: 100%;
+        gap:12px;
+        // display: flex;
+        flex-direction: column;
+        // @extend .gap-form-field;
+        >article{
+          // flex:1;
+          // display: flex;
+          // flex-direction: column;
+          // @extend .gap-form-field;
+          div.form-control{
+            // position: relative;
+            // width: 100%;
+            // display: flex;
+            // flex-direction: column;
+            gap: 12px;
+            p.required-field{
+              // color: $dangerColor;
+              margin-top: 2px;
+              margin-bottom: 2px;
+            }
+            // img{
+            //   width: 25px;
+            //   height: 25px;
+            //   position: absolute;
+            //   right: 24px;
+            //   top: 12px;
+            // }
+            // >input, textarea{
+            //   color: $whiteColor;
+            //   margin: 0;
+            //   padding: 15px 25px;
+            //   border-radius: 10px;
+            //   background-color: transparent;
+            //   }
+            //   textarea{
+            //     resize: vertical;
+            //   }
+          }
+        }
+        >div.policy{
+          div{
+            // display: flex;
+            align-items: center;
+            // gap: 8px;
+            
+            >p{
+              // margin: 0;
+              font-size: 12px;
+              display: flex;
+              gap: 2px;
+              flex-wrap: wrap;
+              // >a{
+              //   color: $purppleColor;
+              //   cursor: pointer;
+              // }
+            }
+          }
+          // >p.required-field{
+          //   color: $dangerColor;
+          // }
+        }
+        // >div.button-container{
+        //   @extend .d-flex-center;
+        //   button.active{
+        //     @include button();
+        //     color: $whiteColor;
+        //     transition: all 125ms ease-in-out;
+        //     border: unset;
+        //     cursor: pointer;
+        //     &:hover{
+        //       @include button($purppleColor);
+        //       transform: scale(1.2);
+        //     }
+        //   }
+        //   button.disabled{
+        //     @include button($grayColor);
+        //     color: $whiteColor;
+        //     border: unset;
+        //   }
+        // }
+      }
+    }
+  
+    // >p{
+    //   position: relative;
+    //   margin-top: 56px;
+    //   @extend .padding-web;
+    //   @extend .d-flex-center;
+    //   justify-content: end;
+    //   z-index: 100;
+    //   transition: all 125ms ease-in-out;
+    //   svg{
+    //     width: 39px;
+    //     height: 39px;
+    //     &:hover .greenColor{
+    //       stroke: $greenColor;
+    //       fill: $greenColor;
+    //     }
+    //     &:hover .rectgreenColor{
+    //       stroke: $greenColor;
+    //     }
+    //   }
+    // }
+  }
+
+  .checkbox{
+    width: 24px;
+    height: 24px;
+  }
+  
+}
+
+@media (max-width: 530px){
+  .checkbox{
+    width: 45px;
+    height: 45px;
+    // display: block;
+    // cursor: pointer;
+    // background-repeat: no-repeat;
+    // transition: all 75ms ease-in-out;
   }
 }
 

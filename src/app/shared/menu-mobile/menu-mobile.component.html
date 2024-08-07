@@ -1,4 +1,4 @@
-<section [ngClass]="{'hidde-menu': navService.menu}">
+<section [ngClass]="{'hidde-menu': navService.menu, 'show-menu': !navService.menu}">
   <div>
     <a href="#home" (click)="navService.toggleMenu(); navService.toggleIcon()">Home</a>
     <a href="#aboutMe" (click)="navService.toggleMenu(); navService.toggleIcon()">About me</a>

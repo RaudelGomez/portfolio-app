@@ -38,12 +38,17 @@ section{
 
 .hidde-menu{
   transform: translateX(100vw);
-  transition: all 1s ease-in-out;
+  transition: all 125ms ease-in-out;
   // animation: slideInOut 1s ease-in-out forwards ;
 }
 
-@keyframes slideInOut {
-  from{transform: translateX(0);}
-  to{transform: translateX(100vw);}
+.show-menu{
+  transform: translateX(0);
+  transition: all 125ms ease-in-out;
 }
+
+// @keyframes slideInOut {
+//   from{transform: translateX(0);}
+//   to{transform: translateX(100vw);}
+// }
 

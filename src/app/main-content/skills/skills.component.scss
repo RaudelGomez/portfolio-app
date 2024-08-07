@@ -73,7 +73,8 @@ section{
         @include button();
         transition: all 125ms ease-in-out;
         &:hover{
-          @include button($purppleColor, 20px, 40px);
+          @include button($purppleColor);
+          transform: scale(1.2);
         }
       }
     }
@@ -294,10 +295,11 @@ section{
           position: relative;
           z-index: 100;
           a{
-            @include button($fs: 16px);
+            @include button($fs: 15px);
             transition: all 125ms ease-in-out;
             &:hover{
-              @include button($purppleColor, 20px, 40px, $fs: 15px);
+              @include button($purppleColor, $fs: 15px);
+              transform: scale(1.2);
             }
           }
         }

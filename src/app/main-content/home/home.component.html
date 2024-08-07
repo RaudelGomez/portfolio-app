@@ -8,14 +8,14 @@
     <div class="container-data">
       <div class="sub-container">
         <div>
-          <span [ngClass]="{'font-size-me': translate.currentLanguage}">{{'me' | translate}}</span>
+          <span [ngClass]="{'font-size-me': translate.currentLanguage === 'de'}">{{'me' | translate}}</span>
           <div class="info">
             <p class="name">Raudel Gómez Smith</p>
             <p class="job">{{'job' | translate}}</p>
           </div>
         </div>
       </div>
-      <a href="#contact" class="lets-talk">Let´s talk</a>
+      <a href="#contact" class="lets-talk">{{'letsTalk' | translate}}</a>
     </div>
     <div class="curve-slide"></div>
     <p>{{'scroll' | translate}} <img src="./assets/img/arrow-down-line.png" alt="arrow"></p>

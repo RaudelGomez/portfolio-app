@@ -1,7 +1,5 @@
 @import '../../../helper.scss';
 
-// rotate: -180deg; writing-mode: vertical-rl;
-
 section{
   display: flex;
   position: relative;
@@ -78,7 +76,7 @@ section{
         >span{
           rotate: -180deg; 
           writing-mode: vertical-rl;
-          // margin-top: -10px;
+          margin-top: -10px;
           // padding-top: 0;
           // height: 0;
           // display: flex;
@@ -161,8 +159,8 @@ section{
 }
 
 .font-size-me{
-  font-size: 38px !important;
-  font-weight: 900;
+  font-size: 36px !important;
+  font-weight: 500 !important;
 }
 
 @media (max-width: 1450px){

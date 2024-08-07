@@ -7,6 +7,7 @@
     <a href="#skills" class="mobile-version">Skills</a>
     <a href="#portfolio" class="mobile-version">Portfolio</a>
     <a href="#contact" class="mobile-version">Contact</a>
-    <img src="./assets/img/burgerMenu.png" alt="close" class="mobile-version">
+    <img src="./assets/img/burgerMenu.png" alt="close" class="mobile-version iconMenu" (click)="navService.toggleMenu(); navService.toggleIcon()" [ngClass]="{'iconMenu-toogle': !navService.icon}">
+    <img src="./assets/img/close_final.png" alt="close" class="mobile-version iconMenu" (click)="navService.toggleMenu(); navService.toggleIcon()" [ngClass]="{'iconMenu-toogle': navService.icon}">
   </div>
 </nav>

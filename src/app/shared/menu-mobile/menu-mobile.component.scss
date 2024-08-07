@@ -21,3 +21,15 @@ section{
     }
   }
 }
+
+.hidde-menu{
+  transform: translateX(100vw);
+  transition: all 1s ease-in-out;
+  // animation: slideInOut 1s ease-in-out forwards ;
+}
+
+@keyframes slideInOut {
+  from{transform: translateX(0);}
+  to{transform: translateX(100vw);}
+}
+

@@ -1,9 +1,9 @@
-<section>
+<section [ngClass]="{'hidde-menu': navService.menu}">
   <div>
-    <a href="#home">Home</a>
-    <a href="#aboutMe">About me</a>
-    <a href="#skills">Skills</a>
-    <a href="#portfolio">Portfolio</a>
-    <a href="#contact">Contact</a>
+    <a href="#home" (click)="navService.toggleMenu(); navService.toggleIcon()">Home</a>
+    <a href="#aboutMe" (click)="navService.toggleMenu(); navService.toggleIcon()">About me</a>
+    <a href="#skills" (click)="navService.toggleMenu(); navService.toggleIcon()">Skills</a>
+    <a href="#portfolio" (click)="navService.toggleMenu(); navService.toggleIcon()">Portfolio</a>
+    <a href="#contact" (click)="navService.toggleMenu(); navService.toggleIcon()">Contact</a>
   </div>
 </section>

@@ -10,6 +10,18 @@ a{
   }
 }
 
+.iconMenu{
+  position: absolute;
+  right: 0;
+  z-index: 0;
+}
+
+.iconMenu-toogle{
+  visibility: hidden;
+  pointer-events: none;
+  transition: all 75ms ease-in-out;
+}
+
 nav{
   @extend .max-width-web;
   height: 112px;
@@ -38,6 +50,7 @@ nav{
     }
   }
   >div{
+    position: relative;
     img{
       display: none;
       cursor: pointer;

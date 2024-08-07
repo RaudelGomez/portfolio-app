@@ -1,3 +1,9 @@
 {
-  "aboutMe": "Über mich"
+  "aboutMe": "Über mich",
+  "skills": "Kenntnisse",
+  "portfolio": "Portfolio",
+  "contact": "Kontakt",
+  "scroll": "Scrollen sie runter",
+  "me": "Ich bin",
+  "job": "FRONTEND ENTWICKLER"
 }

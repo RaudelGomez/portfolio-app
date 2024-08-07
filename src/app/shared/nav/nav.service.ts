@@ -12,10 +12,6 @@ export class NavService {
 
   toggleMenu() {
     this.menu = !this.menu;
-    // if(!this.icon){
-    //   this.icon = true;
-    //   console.log(this.icon);
-    // }
   }
 
   toggleIcon(){

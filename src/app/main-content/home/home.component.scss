@@ -160,6 +160,11 @@ section{
   background-image: url('../../../assets/img/background_hero.png');
 }
 
+.font-size-me{
+  font-size: 38px !important;
+  font-weight: 900;
+}
+
 @media (max-width: 1450px){
   section{
     .aot{
@@ -176,6 +181,10 @@ section{
         } 
       }
     }
+  }
+
+  .font-size-me{
+    font-size: 24px !important;
   }
   .info{
     .name{
@@ -217,7 +226,7 @@ section{
         margin: 0;
         padding: 0;
         //@extend .d-flex-center;
-        gap: 24px;
+        gap: 0;
         // >div{
         //   margin: 0;
         //   padding-top: 0;
@@ -248,13 +257,20 @@ section{
     .container-data{
       .sub-container{
         >div{
+          gap: 0;
           >span{
             font-size: 28px;
+            margin-top: -2px;
           }
         } 
       }
     }
   }
+
+  .font-size-me{
+    font-size: 16px !important;
+  }
+
   .info{
     .name{
       font-size: 28px;
@@ -311,6 +327,11 @@ section{
       }
     }
   }
+
+  .font-size-me{
+    font-size: 14px !important;
+  }
+
   .info{
     .name{
       font-size: 24px;

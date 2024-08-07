@@ -1,3 +1,9 @@
 {
-  "aboutMe": "About me"
+  "aboutMe": "About me",
+  "skills": "Skills",
+  "portfolio": "Portfolio",
+  "contact": "Contact",
+  "scroll": "Scroll down",
+  "me": "I am",
+  "job": "FRONTEND DEVELOPER"
 }

@@ -28,9 +28,9 @@ section{
         height: 16px;
         background-color: $purppleColor;
       }
-      >p{
-        cursor: pointer;
-      }
+      // >p{
+      //   cursor: pointer;
+      // }
     }
 
   }
@@ -45,6 +45,23 @@ section{
 .show-menu{
   transform: translateX(0);
   transition: all 125ms ease-in-out;
+}
+
+.activeLayout{
+  color: $greenColor;
+  text-decoration: underline;
+  text-decoration-color: $purppleColor;
+  text-decoration-thickness: 3px;
+}
+
+.active{
+  @extend .activeLayout;
+  text-underline-offset: 12px;
+}
+
+.activeLanguage{
+  @extend .activeLayout;
+  text-underline-offset: 4px;
 }
 
 // @keyframes slideInOut {

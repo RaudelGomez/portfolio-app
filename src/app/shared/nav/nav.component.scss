@@ -10,6 +10,23 @@ a{
   }
 }
 
+.activeLayout{
+  color: $greenColor;
+  text-decoration: underline;
+  text-decoration-color: $purppleColor;
+  text-decoration-thickness: 3px;
+}
+
+.active{
+  @extend .activeLayout;
+  text-underline-offset: 12px;
+}
+
+.activeLanguage{
+  @extend .activeLayout;
+  text-underline-offset: 4px;
+}
+
 .iconMenu{
   position: absolute;
   right: 0;
@@ -69,9 +86,12 @@ nav{
         height: 16px;
         background-color: $purppleColor;
       }
-      >p{
-        cursor: pointer;
-      }
+      // >p{
+      //   cursor: pointer;
+      //   &:hover{
+      //     color: $greenColor;
+      //   }
+      // }
     }
   }
 }

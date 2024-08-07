@@ -13,4 +13,16 @@ import { TranslateModule } from '@ngx-translate/core';
 })
 export class MenuMobileComponent {
   constructor(public navService:NavService, public translate: TranslationService){}
+
+  activelanguage($event: Event){
+    const element = $event.target as HTMLElement;
+    let parentElement = element.parentElement;
+    let aElements: NodeListOf<HTMLAnchorElement> = parentElement!.querySelectorAll('a');
+    const pElementsArray = Array.from(aElements);
+    for (const a of pElementsArray) {
+      a.classList.remove('activeLanguage');
+    }
+    element.classList.add('activeLanguage');
+  }
+
 }

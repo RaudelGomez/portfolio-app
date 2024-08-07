@@ -1,14 +1,13 @@
 <section [ngClass]="{'hidde-menu': navService.menu, 'show-menu': !navService.menu}">
   <div>
-    <a href="#home" (click)="navService.toggleMenu(); navService.toggleIcon()">Home</a>
-    <a href="#aboutMe" (click)="navService.toggleMenu(); navService.toggleIcon()">About me</a>
-    <a href="#skills" (click)="navService.toggleMenu(); navService.toggleIcon()">Skills</a>
-    <a href="#portfolio" (click)="navService.toggleMenu(); navService.toggleIcon()">Portfolio</a>
-    <a href="#contact" (click)="navService.toggleMenu(); navService.toggleIcon()">Contact</a>
+    <a href="#aboutMe" (click)="navService.toggleMenu(); navService.toggleIcon(); navService.activeLink($event)">{{'aboutMe' | translate}}</a>
+    <a href="#skills" (click)="navService.toggleMenu(); navService.toggleIcon(); navService.activeLink($event)">{{'skills' | translate}}</a>
+    <a href="#portfolio" (click)="navService.toggleMenu(); navService.toggleIcon(); navService.activeLink($event)">{{'portfolio' | translate}}</a>
+    <a href="#contact" (click)="navService.toggleMenu(); navService.toggleIcon(); navService.activeLink($event)">{{'contact' | translate}}</a>
     <div class="translate-option">
-      <p (click)="translate.switchLanguage('en')">EN</p>
+      <a (click)="translate.switchLanguage('en'); navService.activelanguage($event)" [ngClass]="{'activeLanguage': translate.currentLanguage === 'en'}">EN</a>
       <div class="divider"></div>
-      <p (click)="translate.switchLanguage('de')">DE</p>
+      <a (click)="translate.switchLanguage('de'); navService.activelanguage($event)" [ngClass]="{'activeLanguage': translate.currentLanguage === 'de'}">DE</a>
     </div>
   </div>
 </section>

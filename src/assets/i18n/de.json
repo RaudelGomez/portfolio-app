@@ -6,5 +6,10 @@
   "scroll": "Scrollen sie runter",
   "me": "Ich bin",
   "job": "FRONTEND ENTWICKLER",
-  "letsTalk": "Reden wir"
+  "letsTalk": "Reden wir",
+  "aboutMe-headline": "Hallo, ich bin ein Frontend-Entwickler mit Sitz in München. Motiviert von den grenzenlosen Möglichkeiten in der IT, bin ich begeistert von der Gestaltung visuell ansprechender und intuitiver Websites und Anwendungen.",
+  "aboutMe-located": "Da ich hinsichtlich meiner Arbeitsumgebung flexibel bin, kann ich sowohl vor Ort in München als auch remote effektiv arbeiten.",
+  "aboutMe-mind": "Ich bin aufgeschlossen und suche immer nach persönlichen Herausforderungen, um mein Wissen und meine Fähigkeiten ständig zu verbessern.",
+  "aboutMe-professional": "In meinem Beruf geht es beim Programmieren nicht nur darum, Code zu schreiben; es ist eine kreative Form der Problemlösung. Ich bin stolz auf meine Fähigkeit, komplexe technische Herausforderungen in einfache, benutzerfreundliche Lösungen zu destillieren. Auf diese Weise helfe ich Ihnen, Ihre Ziele zu erreichen und Ihre Visionen zum Leben zu erwecken."
+
 }

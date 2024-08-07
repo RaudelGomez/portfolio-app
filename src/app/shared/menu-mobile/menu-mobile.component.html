@@ -5,5 +5,10 @@
     <a href="#skills" (click)="navService.toggleMenu(); navService.toggleIcon()">Skills</a>
     <a href="#portfolio" (click)="navService.toggleMenu(); navService.toggleIcon()">Portfolio</a>
     <a href="#contact" (click)="navService.toggleMenu(); navService.toggleIcon()">Contact</a>
+    <div class="translate-option">
+      <p (click)="translate.switchLanguage('en')">EN</p>
+      <div class="divider"></div>
+      <p (click)="translate.switchLanguage('de')">DE</p>
+    </div>
   </div>
 </section>

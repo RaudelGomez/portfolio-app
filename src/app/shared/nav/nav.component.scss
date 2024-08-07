@@ -57,20 +57,36 @@ nav{
       width: 30px;
     }
   }
-  div{
+
+  div.links-container{
     @extend .d-flex-center;
     gap: 32px;
+    >div.translate-option{
+      @extend .d-flex-center;
+      gap: 8px;
+      >div{
+        width: 2px;
+        height: 16px;
+        background-color: $purppleColor;
+      }
+      >p{
+        cursor: pointer;
+      }
+    }
   }
 }
 
 @media (max-width: 1100px){
   nav{
-    >div{
+    >div.links-container{
       a.mobile-version{
         display: none;
       }
       img.mobile-version{
         display: block;
+      }
+      >div.mobile-version{
+        display: none;
       }
     }
   }

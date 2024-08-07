@@ -8,7 +8,7 @@ section{
   left: 0;
   right: 0;
   top: 0;
-  div{
+  >div{
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -19,6 +19,20 @@ section{
       cursor: pointer;
       font-size: 24px;
     }
+    
+    >div.translate-option{
+      @extend .d-flex-center;
+      gap: 8px;
+      >div{
+        width: 2px;
+        height: 16px;
+        background-color: $purppleColor;
+      }
+      >p{
+        cursor: pointer;
+      }
+    }
+
   }
 }
 

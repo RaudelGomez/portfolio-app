@@ -2,11 +2,16 @@
   <a href="#home">
     <img src="./assets/img/logo-portfolio.png" alt=""><span>audel</span>
   </a>
-  <div>
-    <a href="#aboutMe" class="mobile-version">About me</a>
+  <div class="links-container">
+    <a href="#aboutMe" class="mobile-version">{{'aboutMe' | translate}}</a>
     <a href="#skills" class="mobile-version">Skills</a>
     <a href="#portfolio" class="mobile-version">Portfolio</a>
     <a href="#contact" class="mobile-version">Contact</a>
+    <div class="translate-option mobile-version">
+      <p (click)="translate.switchLanguage('en')">EN</p>
+      <div class="divider"></div>
+      <p (click)="translate.switchLanguage('de')">DE</p>
+    </div>
     <img src="./assets/img/burgerMenu.png" alt="close" class="mobile-version iconMenu" (click)="navService.toggleMenu(); navService.toggleIcon()" [ngClass]="{'iconMenu-toogle': !navService.icon}">
     <img src="./assets/img/close_final.png" alt="close" class="mobile-version iconMenu" (click)="navService.toggleMenu(); navService.toggleIcon()" [ngClass]="{'iconMenu-toogle': navService.icon}">
   </div>

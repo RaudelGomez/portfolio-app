@@ -6,6 +6,7 @@ import { ErrorState } from '../../interfaces/error-state';
 import { RouterModule } from '@angular/router';
 import { TranslationService } from '../../shared/nav/translation.service';
 import { TranslateModule } from '@ngx-translate/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-contact',
@@ -16,7 +17,7 @@ import { TranslateModule } from '@ngx-translate/core';
 })
 export class ContactComponent {
 
-  constructor(public translate:TranslationService){
+  constructor(public translate:TranslationService, public http:HttpClient){
   }
  
   contactData: ContactData = {
@@ -55,17 +56,6 @@ export class ContactComponent {
 
   timePopUp:boolean = true;
 
-  onSubmit(contactForm: NgForm){
-    if(contactForm.valid && this.isTermsAccepted && contactForm.submitted){
-      console.log(this.contactData);
-      this.timePopUp = false;
-      setTimeout(() => {
-        this.timePopUp = true;
-      }, 4000);
-    this.resetValueInput();
-    }
-  }
-
   resetValueInput(){
     this.contactData.name = "";
     this.contactData.email = "";
@@ -100,7 +90,44 @@ export class ContactComponent {
   updateColor(field: keyof typeof this.showInputStyle){
     this.showInputStyle[field] = this.contactData[field];
   }
+
   
+  mailTest = true;
+
+  post = {
+    endPoint: 'https://deineDomain.de/sendMail.php',
+    body: (payload: any) => JSON.stringify(payload),
+    options: {
+      headers: {
+        'Content-Type': 'text/plain',
+        responseType: 'text',
+      },
+    },
+  };
+
+  onSubmit(contactForm: NgForm){
+    if(contactForm.valid && this.isTermsAccepted && contactForm.submitted && !this.mailTest){
+      this.http.post(this.post.endPoint, this.post.body(this.contactData))
+        .subscribe({
+          next: (response) => {
+            this.timePopUp = false;
+              setTimeout(() => {
+                this.timePopUp = true;
+              }, 4000);
+            this.resetValueInput();
+            contactForm.resetForm();
+          },
+          error: (error) => {
+            console.error(error);
+          },
+          complete: () => console.info('send post complete'),
+        });
+      } else if (contactForm.submitted && contactForm.form.valid && this.mailTest) {
+
+        contactForm.resetForm();
+      }
+
+    }
 }
 
 

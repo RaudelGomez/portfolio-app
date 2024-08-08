@@ -37,6 +37,20 @@
   "send-message": "Send message",
   "thanks": "Thank you for contacting me. I will get back to you as soon as possible.",
   "bye": "Have a good day.",
-  "imprint": "Imprint"
- 
+  "imprint": "Imprint",
+  "imprint-1": "Information according to § 5 TMG",
+  "imprint-2": "Register entry",
+  "imprint-3": "Entry in the commercial register. Register court: District Court of Sample City Registration number: HRB 12345 VAT ID: VAT identification number according to §27 a VAT Act: DE123456789 Responsible for the content according to § 55 para. 2 RStV: Max Mustermann Sample Street 1 12345 Sample City",
+  "imprint-4": "How do we collect your data?",
+  "imprint-5": "Your data is collected, firstly, by you providing it to us. This can for example, be data that you enter into a contact form.",
+  "imprint-6": "Other data is collected automatically or with your consent when you visit the website through our IT systems.",
+  "imprint-7": "These are mainly technical data (e.g., internet browser, operating system, or time of page access).",
+  "imprint-8": "This data is collected automatically as soon as you enter this website.",
+  "imprint-9": "Dispute resolution",
+  "imprint-10": "Part of the data is collected to ensure the error-free provision of the website. Other data can be used to analyze your user behavior.",
+  "imprint-11": "What rights do you have regarding your data?",
+  "imprint-12": "The European Commission provides a platform for online dispute resolution (ODR): https://ec.europa.eu/consumers/odr. You can find our email address above in the imprint. We are not willing or obliged to participate in dispute resolution proceedings before a consumer arbitration board.",
+  "imprint-13": "Liability for links",
+  "imprint-14": "Our offer contains links to external third-party websites, the contents of which we have no influence on. Therefore, we cannot assume any liability for these external contents. The respective provider or operator of the pages is always responsible for the contents of the linked pages. The linked pages were checked for possible legal violations at the time of linking. Illegal contents were not recognizable at the time of linking. A permanent control of the contents of the linked pages is, however, not reasonable without concrete evidence of a violation of the law. If we become aware of any legal infringements, we will remove such links immediately.",
+  "imprint-15": "The contents and works created by the site operators on these pages are subject to German copyright law. The duplication, processing, distribution, and any kind of exploitation outside the limits of copyright require the written consent of the respective author or creator. Downloads and copies of this site are only permitted for private, non-commercial use. Insofar as the content on this site was not created by the operator, the copyrights of third parties are respected. In particular, third-party content is marked as such. Should you nevertheless become aware of a copyright infringement, please inform us accordingly. If we become aware of any legal infringements, we will remove such content immediately."
 }

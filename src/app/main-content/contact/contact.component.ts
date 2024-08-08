@@ -4,15 +4,19 @@ import { ContactData } from '../../interfaces/contact-data';
 import { CommonModule } from '@angular/common';
 import { ErrorState } from '../../interfaces/error-state';
 import { RouterModule } from '@angular/router';
+import { TranslationService } from '../../shared/nav/translation.service';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [FormsModule, CommonModule, RouterModule],
+  imports: [FormsModule, CommonModule, RouterModule, TranslateModule],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'
 })
 export class ContactComponent {
+
+  constructor(private translate:TranslationService){}
 
   contactData: ContactData = {
     name: "",

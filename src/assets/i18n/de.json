@@ -15,6 +15,24 @@
   "looking-for": "Auf der Suche nach ",
   "another-skill": "einer anderen Fähigkeit",
   "feel-free": "Nehmen Sie gerne Kontakt mit mir auf. Ich freue mich darauf, meine bisherigen Kenntnisse zu erweitern.",
-  "get-in-touch": "Kontakt"
-
+  "get-in-touch": "Kontakt",
+  "explore": "Entdecken Sie hier eine Auswahl meiner Arbeiten. Interagieren Sie mit Projekten, um meine Fähigkeiten in Aktion zu sehen.",
+  "join-text": "Aufgabenmanager inspiriert vom Kanban-System. Erstellen und organisieren Sie Aufgaben mit Drag & Drop-Funktionen, weisen Sie Benutzer und Kategorien zu.",
+  "shinobi-text": "Ein einfaches Jump-and-Run-Spiel basierend auf einem objektorientierten Ansatz. Helfen Sie dem Samurai, den bösen Drachen zu besiegen.",
+  "pokedex-text": "Basierend auf der PokéAPI, einer einfachen Bibliothek, die Pokémon-Informationen bereitstellt und katalogisiert.",
+  "crm-text": "Ein sehr einfaches Customer-Relationship-Management-System, das mit CRUD-Funktionalität arbeitet.",
+  "oezkan-recommendation": "Raudel ist beim Programmieren mit JavaScript ganz in seinem Element. Er liebt es, Funktionen zu schreiben und komplexe Aufgaben zu lösen. Bei unserem Kanban-Projekt (Join) hat er wichtige Funktionen programmiert. Auch im Team war er mit seiner Gabe, Probleme schnell zu erfassen und zu lösen, eine wertvolle Hilfe. Ich würde jederzeit gerne wieder mit ihm arbeiten und kann ihn uneingeschränkt weiterempfehlen.",
+  "got-problem": "Müssen Sie ein Problem lösen?",
+  "contact-me": "Kontaktieren Sie mich über dieses Formular. Ich bin daran interessiert, von Ihnen zu hören, Ihre Ideen kennenzulernen und mit meiner Arbeit zu Ihren Projekten beizutragen.",
+  "need-frontend": "Brauchen Sie einen Frontend-Entwickler? ",
+  "contact-with-me": "Kontaktiere mich!",
+  "form-name": "Ihr Name ist erforderlich",
+  "form-email-valid": "Sie müssen eine gültige E-Mail-Adresse eingeben",
+  "form-email": "Ihre E-Mail ist erforderlich",
+  "form-text-long": "Ihre Nachricht ist leer oder kleiner als 10 Buchstaben",
+  "form-text": "Deine Nachricht ist leer",
+  "i-red": "Ich habe die ",
+  "privacy-policy": "Datenschutzrichtlinie",
+  "i-agree": "gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu."
+ 
 }

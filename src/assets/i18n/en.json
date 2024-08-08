@@ -15,5 +15,23 @@
   "looking-for": "Looking for ",
   "another-skill": "another skill",
   "feel-free": "Feel free to contact me. I look forward to expanding on my previous knowledge.",
-  "get-in-touch": "Get in touch"
+  "get-in-touch": "Get in touch",
+  "explore": "Explore a selection of my work here - Interact with projects to see my skills in action.",
+  "join-text": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
+  "shinobi-text": "A simple Jump-and-Run game based on an object-oriented approach. Help the samurai to defeat the evil Dragon.",
+  "pokedex-text": "Based on the PokéAPI a simple library that provides and catalogues pokemon information.",
+  "crm-text": "A very Simple Customer Relationship Management system working with CRUD functionality.",
+  "got-problem": "Got a problem to solve?",
+  "contact-me": "Contact me through this form, I am interested in hearing from you, knowing your ideas and contributing to your projects with my work.",
+  "need-frontend": "Need a Frontend developer? ",
+  "contact-with-me": "Contact me!",
+  "form-name": "Your name is required",
+  "form-email-valid": "You must write a valid email",
+  "form-email": "Your email is required",
+  "form-text-long": "Your message is empty or is smaller than 10 letter",
+  "form-text": "Your message is empty",
+  "i-red": "I've read the ",
+  "privacy-policy": "privacy policy",
+  "i-agree": "and agree to the processing of my data as outlined"
+ 
 }

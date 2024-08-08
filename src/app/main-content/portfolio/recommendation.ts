@@ -1,5 +1,6 @@
 export interface Recommendation {
     name: string,
-    text: string,
+    english: string,
+    german: string,
     img: string,
 }

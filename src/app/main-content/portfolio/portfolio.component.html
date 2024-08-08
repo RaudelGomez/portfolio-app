@@ -1,10 +1,10 @@
 <section id="portfolio">
   <div class="header">
     <div class="divider-small"></div>
-    <h2>Portfolio</h2>
+    <h2>{{'portfolio' | translate}}</h2>
     <div class="divider-big"></div>
   </div>
-  <p>Explore a selection of my work here - Interact with projects to see my skills in action.</p>
+  <p>{{'explore' | translate}}</p>
    <article>
     <div>
       <figure class="normal-figure">
@@ -13,7 +13,7 @@
       <div class="normal-div">
         <h4>Join</h4>
         <h5>JavaScript | Firebase | HTML | CSS</h5>
-        <p>Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories. </p>
+        <p>{{'join-text' | translate}}</p>
         <div class="buttons">
           <a class="live" href="">Live test</a>
           <a class="git-hub" href="https://github.com/RaudelGomez/join-project.git" target="_blank">Github</a>
@@ -24,7 +24,7 @@
       <div class="invert-div">
         <h4>Shinobi</h4>
         <h5>JavaScript | HTML | CSS</h5>
-        <p>A simple Jump-and-Run game based on an object-oriented approach. Help the samurai to defeat the evil Dragon. </p>
+        <p>{{'shinobi-text' | translate}}</p>
         <div>
           <a href="">Live test</a>
           <a href="https://github.com/RaudelGomez/Shinobi.git" target="_blank">Github</a>
@@ -42,7 +42,7 @@
       <div class="normal-div">
         <h4>Pokedex</h4>
         <h5>JavaScript | HTML | CSS | Api</h5>
-        <p>Based on the PokéAPI a simple library that provides and catalogues pokemon information. </p>
+        <p>{{'pokedex-text' | translate}}</p>
         <div>
           <a href="">Live test</a>
           <a href="https://github.com/RaudelGomez/Pokedex.git" target="_blank">Github</a>
@@ -53,7 +53,7 @@
       <div class="invert-div">
         <h4>Simple CRM</h4>
         <h5>Angular | TypeScript | Firebase </h5>
-        <p>A very Simple Customer Relationship Management system working with CRUD functionality.. </p>
+        <p>{{'crm-text' | translate}}</p>
         <div>
           <a href="">Live test</a>
           <a href="">Github</a>
@@ -67,7 +67,12 @@
    <div class="recommendation-container">
       <div class="recommendation-sub-container">
         <img src="./assets/img/comillas.png" alt="comillas">
-          <p>{{currentText}}</p>
+        @if(translate.currentLanguage == "en"){
+          {{this.recommendation[currentPostId].english}}
+        }@else {
+          {{this.recommendation[currentPostId].german}}
+        }
+          <!-- <p>{{currentText}}</p> -->
         <div>
           <div class="divider-text-partner"></div>
           <span>{{currentName}} - Team Partner</span>

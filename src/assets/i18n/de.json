@@ -33,6 +33,10 @@
   "form-text": "Deine Nachricht ist leer",
   "i-red": "Ich habe die ",
   "privacy-policy": "Datenschutzrichtlinie",
-  "i-agree": "gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu."
+  "i-agree": "gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.",
+  "accept-please": "Bitte akzeptieren Sie die Datenschutzrichtlinie",
+  "send-message": "Nachricht senden",
+  "thanks": "Vielen Dank für Ihre Kontaktaufnahme. Ich werde mich schnellstmöglich bei Ihnen melden.",
+  "bye": "Haben Sie einen guten Tag."
  
 }

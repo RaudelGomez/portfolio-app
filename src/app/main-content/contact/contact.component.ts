@@ -91,9 +91,6 @@ export class ContactComponent {
     this.showInputStyle[field] = this.contactData[field];
   }
 
-  
-  mailTest = true;
-
   post = {
     endPoint: 'https://raudel-gomez-smith.de/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
@@ -106,7 +103,7 @@ export class ContactComponent {
   };
 
   onSubmit(contactForm: NgForm){
-    if(contactForm.valid && this.isTermsAccepted && contactForm.submitted && !this.mailTest){
+    if(contactForm.valid && this.isTermsAccepted && contactForm.submitted){
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
@@ -115,18 +112,13 @@ export class ContactComponent {
                 this.timePopUp = true;
               }, 4000);
             this.resetValueInput();
-            contactForm.resetForm();
           },
           error: (error) => {
             console.error(error);
           },
           complete: () => console.info('send post complete'),
         });
-      } else if (contactForm.submitted && contactForm.form.valid && this.mailTest) {
-
-        contactForm.resetForm();
-      }
-
+      } 
     }
 }
 

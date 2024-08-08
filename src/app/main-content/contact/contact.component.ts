@@ -16,8 +16,9 @@ import { TranslateModule } from '@ngx-translate/core';
 })
 export class ContactComponent {
 
-  constructor(private translate:TranslationService){}
-
+  constructor(public translate:TranslationService){
+  }
+ 
   contactData: ContactData = {
     name: "",
     email: "",

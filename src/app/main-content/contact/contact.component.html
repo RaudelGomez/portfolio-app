@@ -25,7 +25,7 @@
             }
           }
       
-          <input [ngClass]="{'color-field-success' : showInputStyle['name'], 'color-field-incomplete' : !showInputStyle['name'] }" [(ngModel)]="contactData.name" type="text" #name="ngModel" name="name" placeholder="Your name" required (click)="fieldClick(name, 'name', 'name', 'name', true)" (change)="updateColor('name')">
+          <input [ngClass]="{'color-field-success' : showInputStyle['name'], 'color-field-incomplete' : !showInputStyle['name'] }" [(ngModel)]="contactData.name" type="text" #name="ngModel" name="name" [placeholder]="translate.placeholderName" required (click)="fieldClick(name, 'name', 'name', 'name', true)" (change)="updateColor('name')">
 
           
           @if(firstTimeMessage.name){
@@ -46,7 +46,7 @@
             }
           }
           
-          <input [ngClass]="{'color-field-success' : showInputStyle['email'], 'color-field-incomplete' : !showInputStyle['email']}" [(ngModel)]="contactData.email" type="email" #email="ngModel" name="email" placeholder="Your email" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" (click)="fieldClick(email, 'email', 'email', 'email', true)" (change)="updateColor('email')">
+          <input [ngClass]="{'color-field-success' : showInputStyle['email'], 'color-field-incomplete' : !showInputStyle['email']}" [(ngModel)]="contactData.email" type="email" #email="ngModel" name="email" [placeholder]="translate.placeholderEmail" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" (click)="fieldClick(email, 'email', 'email', 'email', true)" (change)="updateColor('email')">
           
           @if(firstTimeMessage.email){
             @if (!email.valid && email.touched ) {
@@ -66,7 +66,7 @@
             }
           }
 
-          <textarea [ngClass]="{'color-field-success' : showInputStyle['message'], 'color-field-incomplete' : !showInputStyle['message'] }" [(ngModel)]="contactData.message" rows="10" #message="ngModel" name="message" placeholder="Your message" minlength="10" required (click)="fieldClick(message, 'message', 'message', 'message', true)" (change)="updateColor('message')"></textarea>
+          <textarea [ngClass]="{'color-field-success' : showInputStyle['message'], 'color-field-incomplete' : !showInputStyle['message'] }" [(ngModel)]="contactData.message" rows="10" #message="ngModel" name="message" [placeholder]="translate.placeholderMessage"  minlength="10" required (click)="fieldClick(message, 'message', 'message', 'message', true)" (change)="updateColor('message')"></textarea>
 
           @if(firstTimeMessage.message){
             @if (!message.valid && message.touched ) {

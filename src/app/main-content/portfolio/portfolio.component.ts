@@ -3,6 +3,8 @@ import { Recommendation } from './recommendation';
 import { CommonModule } from '@angular/common';
 import { TranslationService } from '../../shared/nav/translation.service';
 import { TranslateModule } from '@ngx-translate/core';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 @Component({
   selector: 'app-portfolio',
@@ -15,6 +17,10 @@ import { TranslateModule } from '@ngx-translate/core';
 export class PortfolioComponent  {
 
   constructor(public translate:TranslationService){}
+
+  ngOnInit() {
+    AOS.init();
+  }
 
   public recommendation:Recommendation[] = [
     {

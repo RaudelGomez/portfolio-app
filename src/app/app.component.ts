@@ -1,8 +1,10 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { NavComponent } from './shared/nav/nav.component';
 import { NavService } from './shared/nav/nav.service';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 @Component({
   selector: 'app-root',
@@ -11,10 +13,16 @@ import { NavService } from './shared/nav/nav.service';
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'portfolio-app';
 
-  constructor(private navService: NavService){}
+  constructor(private navService: NavService) {
+    
+  }
+
+  ngOnInit() {
+    AOS.init();
+  }
 
   @HostListener('window:resize', ['$event'])
   onResize(event: Event) {
@@ -28,3 +36,7 @@ export class AppComponent {
     }
   }
 }
+function ngOnInit() {
+  throw new Error('Function not implemented.');
+}
+

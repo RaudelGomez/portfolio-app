@@ -8,12 +8,10 @@ section{
   @extend .padding-web;
   @include padding-top-bottom(112px);
   position: relative;
-  // z-index: 100;
   .mobile-version{
     display: none;
     h2{
       margin-bottom: 0;
-      //font-size: 54px
     }
   }
   .icons{
@@ -60,11 +58,9 @@ section{
     flex-direction: column;
     gap: 24px;
     h2{
-      //line-height: 1;
       margin-bottom: 12px;
       visibility: hidden;
       pointer-events: none;
-      // display: none
     }
     >div{
       display: flex;

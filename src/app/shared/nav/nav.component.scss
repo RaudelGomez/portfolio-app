@@ -85,13 +85,11 @@ nav{
         width: 2px;
         height: 16px;
         background-color: $purppleColor;
+       
       }
-      // >p{
-      //   cursor: pointer;
-      //   &:hover{
-      //     color: $greenColor;
-      //   }
-      // }
+      >a{
+        font-size: 16px;
+      }
     }
   }
 }

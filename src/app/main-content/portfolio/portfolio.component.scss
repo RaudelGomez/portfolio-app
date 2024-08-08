@@ -20,12 +20,10 @@ section{
 }
 
 section{
-  //@extend .padding-web;
   @include padding-top-bottom(112px);
   @extend .d-flex-center;
   flex-direction: column;
   .header{
-    //align-self: flex-end;
     display: flex;
     align-items: center;
     justify-content: end;
@@ -41,7 +39,6 @@ section{
       background-color: $purppleColor;
     }
     .divider-big{
-      //min-width: 107px;
       max-width: 407px;
       width: 100%;
       height: 4px;
@@ -194,7 +191,6 @@ section{
     gap:48px;
     padding: 0 188px;
     position: relative;
-    // @extend .padding-web;
     .recommendation-sub-container{
       @extend .d-flex-center;
       position: relative;
@@ -330,57 +326,34 @@ section{
   section{
     .recommendation-container{
       flex-direction: column;
-      // @extend .d-flex-center;
       gap:24px;
       padding: 0 24px;
-      // position: relative;
-      // @extend .padding-web;
       .recommendation-sub-container{
         order:1;
-        flex: 1;
-        // @extend .d-flex-center;
-        // position: relative;
-        // border: 4px solid $greenColor;
-        // border-radius: 32px;
-        // flex-direction: column;
+        flex: 1;;
         padding: 16px;
         img{
-          // position: absolute;
           top: -30px;
           left: -15px;
           width: 48px;
-          // aspect-ratio: 1/1;
         }
         >div{
           @extend .d-flex-center;
           flex-direction: column;
           align-items: flex-start;
-          gap: 8px;
-          // width: 100%;
-                
+          gap: 8px;                
           div.divider-text-partner{
           width: 10%;
           flex: unset;
           min-height: 2px;
-          // background-color: $purppleColor;
-          // display: inline-block;
           }
-          // span{
-          //   display: inline-block;
-          // }
         }
       }
       >figure{
         order:0;
         flex: 1;
         min-height: 272px;
-        // margin: 0;
-        // padding: 0;
         min-width: 272px;
-        // width: 100%;
-        // max-height: 272px;
-        // height: 100%;
-        // display: block;
       }
     }  
   }
@@ -428,18 +401,9 @@ section{
         flex-direction: column;
         gap:0px;
         figure.normal-figure{
-          // margin: 0;
-          // max-width: 620px;
-          // max-height: 339px;
-          // flex:1;
-          // @extend .d-flex-center;
           justify-content: center;
           img{
             margin-top: 0;
-            // width: 50%;
-            // height: 100%;
-            // object-fit: contain;
-            // object-position: center;
           }
         }
         div.normal-div{
@@ -447,61 +411,17 @@ section{
           >*{
             text-align: center;
           }
-          // h4{
-          //   font-size: 32px;
-          //   font-weight: 700;
-          //   color: $purppleColor;
-          //   text-align: center;
-          // }
-          // h5{
-          //   font-size: 24px;
-          //   font-weight: 400;
-          //   color: $greenColor;
-          //   text-align: center;
-          // }
-          // p{
-          //   font-size: 16px;
-          //   font-weight: 400;
-          //   text-align: center;
-          // }
           >div{
-            // @extend .d-flex-center;
             justify-content: center;
             gap:50px;
-            // a{
-            //   @include button($color: $purppleColor);
-            //   transition: all 125ms ease-in-out;
-            //   &:hover{
-            //     transform: scale(1.2);
-            //     @include button($greenColor);
-            //   }
-            // }
-            // a:last-child{
-            //   @include button(transparent);
-            //   border: 1px solid $greenColor;
-            //   transition: all 125ms ease-in-out;
-            //   &:hover{
-            //     transform: scale(1.2);
-            //     @include button($greenColor);
-            //   }
-            // }
           }
         }
   
         figure.invert-figure{
           order:0;
-          // margin: 0;
-          // width: 620px;
-          // height: 339px;
-          // flex:1;
-          // @extend .d-flex-center;
           justify-content: center;
           img{
             margin-top: 0;
-            // width: 50%;
-            // height: 100%;
-            // object-fit: contain;
-            // object-position: center;
           }
         }
   
@@ -515,26 +435,8 @@ section{
           flex-direction: column;
           gap:15px;
           >div{
-            // @extend .d-flex-center;
             justify-content: center;
             gap:50px;
-            // a{
-            //   @include button($purppleColor);
-            //   transition: all 125ms ease-in-out;
-            //   &:hover{
-            //     transform: scale(1.2);
-            //     @include button($greenColor);
-            //   }
-            // }
-            // a:last-child{
-            //   @include button(transparent);
-            //   border: 1px solid $greenColor;
-            //   transition: all 125ms ease-in-out;
-            //   &:hover{
-            //     transform: scale(1.2);
-            //     @include button($greenColor);
-            //   }
-            // }
           }
         }
       }
@@ -546,122 +448,37 @@ section{
   section{
     article{
       >div{
-        // @extend .d-flex-center;
-        // flex-direction: column;
-        // justify-content: space-around;
-        // gap:0px;
-        // width:100%;
-        // figure.normal-figure{
-        //   margin: 0;
-        //   max-width: 620px;
-        //   max-height: 339px;
-        //   flex:1;
-        //   @extend .d-flex-center;
-        //   justify-content: center;
-        //   img{
-        //     margin-top: -50px;
-        //     width: 50%;
-        //     height: 100%;
-        //     object-fit: contain;
-        //     object-position: center;
-        //   }
-        // }
-        div.normal-div{
-          // flex: 1;
-          // display: flex;
-          // flex-direction: column;
-          // align-items: center;
-          // gap:15px;
-          // // width: auto;
-          // >*{
-          //   margin: 0;
-          // }
-          // h4{
-          //   font-size: 32px;
-          //   font-weight: 700;
-          //   color: $purppleColor;
-          //   text-align: center;
-          // }
-          // h5{
-          //   font-size: 24px;
-          //   font-weight: 400;
-          //   color: $greenColor;
-          //   text-align: center;
-          // }
-          // p{
-          //   font-size: 16px;
-          //   font-weight: 400;
-          //   text-align: center;
-          // }
+        div.normal-div{  
           >div{
-            // @extend .d-flex-center;
-            // justify-content: center;
             gap:32px;
             a{
               @include button($color: $purppleColor, $fs:12px);
-              // transition: all 125ms ease-in-out;
               &:hover{
-                // transform: scale(1.2);
                 @include button($greenColor, $fs:12px);
               }
             }
             a:last-child{
               @include button(transparent, $fs:12px);
-              // border: 1px solid $greenColor;
-              // transition: all 125ms ease-in-out;
               &:hover{
-                // transform: scale(1.2);
                 @include button($greenColor, $fs:12px);
               }
             }
           }
         }
   
-        // figure.invert-figure{
-        //   //margin-top: 24px;
-        //   // order:0;
-        //   // margin: 0;
-        //   // width: 620px;
-        //   // height: 339px;
-        //   // flex:1;
-        //   // @extend .d-flex-center;
-        //   // justify-content: center;
-        //   // img{
-        //   //   // margin-top: 0;
-        //   //   // width: 50%;
-        //   //   // height: 100%;
-        //   //   // object-fit: contain;
-        //   //   // object-position: center;
-        //   // }
-        // }
-  
         div.invert-div{
-          // order: 1;
-          // >*{
-          //   text-align: center;
-          // }
-          // flex: 1;
-          // display: flex;
-          // flex-direction: column;
-          // gap:15px;
           >div{
-            // @extend .d-flex-center;
             justify-content: center;
             gap:32px;
             a{
               @include button($color: $purppleColor, $fs:12px);
-              // transition: all 125ms ease-in-out;
               &:hover{
-                // transform: scale(1.2);
                 @include button($greenColor, $fs:12px);
               }
             }
             a:last-child{
               @include button(transparent, $fs:12px);
-              // border: 1px solid $greenColor;
-              // transition: all 125ms ease-in-out;
               &:hover{
-                // transform: scale(1.2);
                 @include button($greenColor, $fs:12px);
               }
             }

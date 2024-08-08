@@ -40,5 +40,4 @@ export class NavService {
     element.classList.add('activeLanguage');
   }
 
-
 }

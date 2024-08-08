@@ -95,7 +95,7 @@ export class ContactComponent {
   mailTest = true;
 
   post = {
-    endPoint: 'https://deineDomain.de/sendMail.php',
+    endPoint: 'https://raudel-gomez-smith.de/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {

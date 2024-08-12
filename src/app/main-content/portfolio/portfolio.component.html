@@ -83,13 +83,15 @@
    <div class="recommendation-container">
       <div class="recommendation-sub-container">
         <img src="./assets/img/comillas.png" alt="comillas">
-        @if(translate.currentLanguage == "en"){
-          {{this.recommendation[currentPostId].english}}
-        }@else if(translate.currentLanguage == "de") {
-          {{this.recommendation[currentPostId].german}}
-        }@else {
-          {{this.recommendation[currentPostId].spanish}}
-        }
+        <div class="text-recom">
+          @if(translate.currentLanguage == "en"){
+            {{this.recommendation[currentPostId].english}}
+          }@else if(translate.currentLanguage == "de") {
+            {{this.recommendation[currentPostId].german}}
+          }@else {
+            {{this.recommendation[currentPostId].spanish}}
+          }
+        </div>
         <div>
           <div class="divider-text-partner"></div>
           <span>{{currentName}} - Team Partner</span>

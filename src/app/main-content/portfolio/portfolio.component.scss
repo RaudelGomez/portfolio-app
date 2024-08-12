@@ -198,6 +198,7 @@ section{
       border-radius: 32px;
       flex-direction: column;
       padding: 48px 96px;
+      min-height: 230px;
       img{
         position: absolute;
         top: -40px;
@@ -325,6 +326,16 @@ section{
   }
 }
 
+@media (max-width: 1450px){
+  section{
+    .recommendation-container{
+      .recommendation-sub-container{
+        min-height: 300px;
+      }
+    }
+  }
+}
+
 @media (max-width: 1230px){
   section{
     .recommendation-container{
@@ -335,6 +346,7 @@ section{
         order:1;
         flex: 1;;
         padding: 16px;
+        min-height: 300px;
         img{
           top: -30px;
           left: -15px;
@@ -493,6 +505,9 @@ section{
 
   section{
     .recommendation-container{
+      .recommendation-sub-container{
+        min-height: 400px;
+      }
       >figure{
         min-height: 144px;
         min-width: 144px;;
@@ -507,3 +522,16 @@ section{
     }
   }
 }
+
+@media (max-width: 350px){
+  section{
+    .recommendation-container{
+      .recommendation-sub-container{
+        min-height: 550px;
+      }
+    }  
+  }
+}
+
+
+

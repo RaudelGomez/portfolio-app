@@ -277,19 +277,22 @@ div.divider-partner{
       width:40px;
       height: 40px;
       cursor: pointer;
-      &:hover{
-        border-radius: 100%;
-        border: 2px solid $greenColor;
-        overflow: hidden;
-        transform: scale(1.2);
-      }
-      img{
+      .arrow-right{
+        background-image: url('../../../assets/img/rechts.png');
         width: 100%;
         height: 100%;
-        object-fit: contain;
-        object-position: center;
+        transition: all 125ms ease-in-out;
         &:hover{
-          border: 1px solid $greenColor;
+          background-image: url('../../../assets/img/arrow_right_circle.png');
+        }
+      }
+      .arrow-left{
+        background-image: url('../../../assets/img/links.png');
+        width: 100%;
+        height: 100%;
+        transition: all 125ms ease-in-out;
+        &:hover{
+          background-image: url('../../../assets/img/arrow_left_circle.png');
         }
       }
     }

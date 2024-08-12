@@ -111,7 +111,7 @@
    <div class="container-arrows-partner">
       <div class="sub-container-arrows-partner">
         <figure (click)="before()">
-          <img src="./assets/img/links.png" alt="link arrow">
+          <div class="arrow-left"></div>
         </figure>
         @for(point of recommendation; track point; let index = $index){
           @if(currentPostId == index){
@@ -121,7 +121,7 @@
           }
         }
         <figure (click)="next()">
-          <img src="./assets/img/rechts.png" alt="right arrow">
+          <div class="arrow-right"></div>
         </figure>
       </div>
    </div>

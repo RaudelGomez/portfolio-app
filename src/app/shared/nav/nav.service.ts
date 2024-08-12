@@ -33,7 +33,6 @@ export class NavService {
     for (let id of this.sectionIds) {
       const element = this.document.getElementById(id);
       if (element) {
-        console.log(element);
         element.classList.remove('active');
         const offsetTop = element.offsetTop - 130; 
         const offsetHeight = element.offsetHeight;
@@ -49,7 +48,6 @@ export class NavService {
     if (!activeSectionFound) {
       this.activeSection = '';
     }
-    console.log(this.activeSection);
   }
 
   toggleMenu() {

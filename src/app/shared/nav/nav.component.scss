@@ -8,6 +8,12 @@ a{
   &:hover{
     color: $greenColor;
   }
+
+  &:visited,
+  &:focus,
+  &:active {  // No confundir con .active (que es una clase)
+    color: $whiteColor;  // O el color que quieras como predeterminado
+  }
 }
 
 .activeLayout{
@@ -17,7 +23,7 @@ a{
   text-decoration-thickness: 3px;
 }
 
-.active{
+a.active{
   @extend .activeLayout;
   text-underline-offset: 12px;
 }

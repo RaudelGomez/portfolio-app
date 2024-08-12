@@ -3,10 +3,10 @@
     <img src="./assets/img/logo-portfolio.png" alt=""><span>audel</span>
   </a>
   <div class="links-container">
-    <a (click)="navService.activeLink($event)" href="#aboutMe" class="mobile-version">{{'aboutMe' | translate}}</a>
-    <a (click)="navService.activeLink($event)" href="#skills" class="mobile-version">{{'skills' | translate}}</a>
-    <a (click)="navService.activeLink($event)" href="#portfolio" class="mobile-version">{{'portfolio' | translate}}</a>
-    <a (click)="navService.activeLink($event)" href="#contact" class="mobile-version">{{'contact' | translate}}</a>
+    <a  [class.active]="navService.activeSection === 'aboutMe'" href="#aboutMe" class="mobile-version">{{'aboutMe' | translate}}</a>
+    <a  [class.active]="navService.activeSection === 'skills'" href="#skills" class="mobile-version">{{'skills' | translate}}</a>
+    <a  [class.active]="navService.activeSection === 'portfolio'" href="#portfolio" class="mobile-version">{{'portfolio' | translate}}</a>
+    <a  [class.active]="navService.activeSection === 'contact'" href="#contact" class="mobile-version">{{'contact' | translate}}</a>
     <div class="translate-option mobile-version">
       <a (click)="translate.switchLanguage('en'); navService.activelanguage($event)" [ngClass]="{'activeLanguage': translate.currentLanguage === 'en'}">EN</a>
       <div class="divider"></div>

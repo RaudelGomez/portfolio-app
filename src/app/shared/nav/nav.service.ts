@@ -35,7 +35,7 @@ export class NavService {
       if (element) {
         console.log(element);
         element.classList.remove('active');
-        const offsetTop = element.offsetTop - 130; // Ajusta según la altura de tu navbar
+        const offsetTop = element.offsetTop - 130; 
         const offsetHeight = element.offsetHeight;
 
         if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
@@ -61,38 +61,13 @@ export class NavService {
   }
 
   activeLink($event: Event){
-    // const element = $event.target as HTMLElement;
-    // let parentElement = element.parentElement;
-    // let aElements: NodeListOf<HTMLAnchorElement> = parentElement!.querySelectorAll('a');
-    // const aElementsArray = Array.from(aElements);
-    // for (const a of aElementsArray) {
-    //   a.classList.remove('active');
-    // }
-    // element.classList.add('active');
     const element = $event.target as HTMLElement;
-    const targetSection = element.getAttribute('href')?.substring(1); // Obtener el id de la sección
-
+    const targetSection = element.getAttribute('href')?.substring(1);
     if (targetSection) {
-      this.activeSection = targetSection;  // Actualiza la sección activa en el servicio
-      setTimeout(() => this.detectSection(), 300);  // Forzar la actualización después del clic
+      this.activeSection = targetSection;  
+      setTimeout(() => this.detectSection(), 300);  
     }
   }
-
-  // @HostListener('window:scroll', [])
-  // onWindowScroll() {
-  //   const sections = document.querySelectorAll('section');
-  //   console.log(sections);
-  //   let scrollPos = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
-
-  //   sections.forEach(section => {
-  //     const sectionOffset = section.offsetTop - 50;
-  //     const sectionHeight = section.offsetHeight;
-
-  //     if (scrollPos >= sectionOffset && scrollPos < sectionOffset + sectionHeight) {
-  //       this.activeSection = section.getAttribute('id')!;
-  //     }
-  //   });
-  // }
 
   activelanguage($event: Event){
     const element = $event.target as HTMLElement;

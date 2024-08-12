@@ -11,8 +11,8 @@ a{
 
   &:visited,
   &:focus,
-  &:active {  // No confundir con .active (que es una clase)
-    color: $whiteColor;  // O el color que quieras como predeterminado
+  &:active { 
+    color: $whiteColor;  
   }
 }
 

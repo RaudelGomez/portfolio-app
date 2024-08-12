@@ -215,7 +215,7 @@ section{
     .aot{
       >figure{
         img.me{
-          bottom: -150px;
+          bottom: -170px;
         }
       }
     }
@@ -355,10 +355,11 @@ section{
 }
 
 
-@media (max-width: 360px){
+@media (max-width: 385px){
   section{
     .aot{
       >figure{
+        bottom: 200px !important;
         img.me{
           bottom: -340px;
         }
@@ -377,7 +378,7 @@ section{
   }
 }
 
-@media only screen and (max-height: 1000px) {
+@media only screen and (max-height: 900px) {
   .curve-slide{
       top: 0;
       left:0;
@@ -386,7 +387,7 @@ section{
     }
     .aot{
       >figure{
-        top: -50px;
+        top: unset;
       }
     }
     
@@ -396,6 +397,35 @@ section{
       }
     }
 }
+
+@media only screen and (min-width: 1200px) {
+  .curve-slide{
+    top: 33vh;
+    left:0;
+    right: 0;
+    bottom: -470px;
+  }
+}
+
+// @media only screen and (max-height: 750px) {
+//   .curve-slide{
+//       top: -10vh !important;
+//       left:0;
+//       right: 0;
+//       bottom: -470px;
+//     }
+//     .aot{
+//       >figure{
+//         top: -50px;
+//       }
+//     }
+    
+//     section{
+//       div{
+//         padding-top: 0px;
+//       }
+//     }
+// }
 
 
 

@@ -8,6 +8,8 @@
       <a (click)="translate.switchLanguage('en'); navService.activelanguage($event)" [ngClass]="{'activeLanguage': translate.currentLanguage === 'en'}">EN</a>
       <div class="divider"></div>
       <a (click)="translate.switchLanguage('de'); navService.activelanguage($event)" [ngClass]="{'activeLanguage': translate.currentLanguage === 'de'}">DE</a>
+      <div class="divider"></div>
+      <a (click)="translate.switchLanguage('es'); navService.activelanguage($event)" [ngClass]="{'activeLanguage': translate.currentLanguage === 'es'}">ES</a>
     </div>
   </div>
 </section>

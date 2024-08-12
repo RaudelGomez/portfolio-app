@@ -15,12 +15,12 @@
           <span [ngClass]="{'font-size-me': translate.currentLanguage === 'de'}">{{'me' | translate}}</span>
           <div class="info">
             <p class="name">Raudel Gómez Smith</p>
-            <p class="job">{{'job' | translate}}</p>
+            <p class="job" [ngClass]="{'font-size-es': translate.currentLanguage === 'es'}">{{'job' | translate}}</p>
           </div>
         </div>
       </div>
       <a href="#contact" class="lets-talk">{{'letsTalk' | translate}}</a>
     </div>
     <div class="curve-slide"></div>
-    <p>{{'scroll' | translate}} <img src="./assets/img/arrow-down-line.png" alt="arrow"></p>
+    <p [ngClass]="{'bottom-abs': translate.currentLanguage === 'es', 'hidde-scroll-text' : translate.currentLanguage === 'es'}">{{'scroll' | translate}} <img src="./assets/img/arrow-down-line.png" alt="arrow"></p>
 </section>

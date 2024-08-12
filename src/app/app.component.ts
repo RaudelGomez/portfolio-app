@@ -4,7 +4,6 @@ import { RouterOutlet } from '@angular/router';
 import { NavComponent } from './shared/nav/nav.component';
 import { NavService } from './shared/nav/nav.service';
 import AOS from 'aos';
-import 'aos/dist/aos.css';
 
 @Component({
   selector: 'app-root',
@@ -36,7 +35,5 @@ export class AppComponent implements OnInit {
     }
   }
 }
-function ngOnInit() {
-  throw new Error('Function not implemented.');
-}
+
 

@@ -407,25 +407,15 @@ section{
   }
 }
 
-// @media only screen and (max-height: 750px) {
-//   .curve-slide{
-//       top: -10vh !important;
-//       left:0;
-//       right: 0;
-//       bottom: -470px;
-//     }
-//     .aot{
-//       >figure{
-//         top: -50px;
-//       }
-//     }
-    
-//     section{
-//       div{
-//         padding-top: 0px;
-//       }
-//     }
-// }
+@media only screen and (min-height: 900px) {
+  .aot{
+    >figure{
+      top: 0 !important;
+    }
+  }
+}
+
+
 
 
 

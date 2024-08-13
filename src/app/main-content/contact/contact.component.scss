@@ -250,7 +250,7 @@ div.policy{
 
 //Background image
 section{
-  overflow: hidden;
+  overflow-y: clip;
   >img.purpple-img{
     position: absolute;
     z-index: -100;

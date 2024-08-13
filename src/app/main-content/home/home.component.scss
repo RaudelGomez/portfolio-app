@@ -391,6 +391,11 @@ section{
         top: unset;
       }
     }
+
+    .container-data{
+      gap: 0 !important;
+      margin-top: -38px !important;
+    }
     
     section{
       div{
@@ -415,6 +420,7 @@ section{
       top: 0 !important;
     }
   }
+  
 }
 
 

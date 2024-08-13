@@ -136,7 +136,7 @@ section {
     @extend .padding-web;
     @extend .d-flex-center;
     justify-content: end;
-    z-index: 100;
+    z-index: -100;
     transition: all 125ms ease-in-out;
     svg{
       width: 39px;
@@ -161,7 +161,7 @@ section{
     right: 0;
     top: 0;
     bottom: 0;
-    z-index: 0;
+    z-index: -10;
     @extend .d-flex-center;
     >p{
       font-size: 24px;
@@ -171,6 +171,10 @@ section{
       border-radius: 16px;
     }
   }
+}
+
+.index-0{
+  z-index: 0 !important;
 }
 
 .show-message{

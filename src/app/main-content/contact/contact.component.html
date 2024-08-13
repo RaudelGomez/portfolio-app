@@ -97,7 +97,7 @@
       </div>
     </form>
   </article>
-  <div class="message">
+  <div class="message" [ngClass]="{'index-0': !timePopUp}">
     <p [ngClass]="{'show-message': timePopUp}">
       {{'thanks' | translate}}
       <br>

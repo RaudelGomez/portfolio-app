@@ -359,7 +359,8 @@ section{
   section{
     .aot{
       >figure{
-        bottom: 200px !important;
+        bottom: 155px !important;
+        //bottom: 200px !important;
         img.me{
           bottom: -340px;
         }
@@ -407,6 +408,7 @@ section{
   }
 }
 
+//For narrow monitor computer
 @media only screen and (min-height: 900px) {
   .aot{
     >figure{

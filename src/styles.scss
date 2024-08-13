@@ -4,6 +4,7 @@
 
 html{
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body{
@@ -13,7 +14,7 @@ body{
   font-family: 'Poppins';
   color: $whiteColor;
   background-color: $bgColor;
-  // overflow-x: hidden;
+  overflow-x: hidden;
   // overflow-y: scroll;
 }
 

@@ -22,5 +22,7 @@
       <a href="#contact" class="lets-talk">{{'letsTalk' | translate}}</a>
     </div>
     <div class="curve-slide"></div>
-    <p [ngClass]="{'bottom-abs': translate.currentLanguage === 'es', 'hidde-scroll-text' : translate.currentLanguage === 'es'}">{{'scroll' | translate}} <img src="./assets/img/arrow-down-line.png" alt="arrow"></p>
+    <div class="scroll" [ngClass]="{'hidde-scroll-text' : translate.currentLanguage === 'es', 'hidde-scroll-text-de' : translate.currentLanguage === 'de'}">
+      <p [ngClass]="{'bottom-abs': translate.currentLanguage === 'es' }">{{'scroll' | translate}} <img src="./assets/img/arrow-down-line.png" alt="arrow"></p>
+    </div>
 </section>

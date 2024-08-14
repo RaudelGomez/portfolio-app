@@ -15,7 +15,6 @@ body{
   color: $whiteColor;
   background-color: $bgColor;
   overflow-x: hidden;
-  // overflow-y: scroll;
 }
 
 a{
@@ -28,6 +27,29 @@ h2{
   font-size: 90px;
   font-weight: 700;
   margin: 0 0 40px 0;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: $bgDark;
+  ;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $greenColor;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: $purppleColor;
 }
 
 @media (max-width: 1100px){

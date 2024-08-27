@@ -82,8 +82,11 @@ section{
 .about-me-subcontainer{
   @extend .d-flex-center;
   flex-direction: column;
+  align-items: flex-start;
   .row-text{
     @extend .d-flex-center;
+    justify-content: flex-start;
+    align-items: flex-start;
   }
 }
 

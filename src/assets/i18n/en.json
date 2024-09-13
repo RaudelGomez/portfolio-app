@@ -21,6 +21,7 @@
   "shinobi-text": "A simple Jump-and-Run game based on an object-oriented approach. Help the samurai to defeat the evil Dragon.",
   "pokedex-text": "Based on the PokéAPI a simple library that provides and catalogues pokemon information.",
   "crm-text": "A very Simple Customer Relationship Management system working with CRUD functionality.",
+  "e-commerce": "A simple eCommerce app that allows users to buy products, add them to the cart, and securely complete their purchase using PayPal.",
   "got-problem": "Got a problem to solve?",
   "contact-me": "Contact me through this form. I am interested in hearing from you, knowing your ideas and contributing to your projects with my work.",
   "need-frontend": "Need a Frontend developer? ",
